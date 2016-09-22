@@ -1,0 +1,1406 @@
+loading local configure->../../../conf/order.properties
+loading remote configure->http://192.168.2.57:9111/allc.properties
+loading remote configure(http://192.168.2.57:9111/allc.properties) success
+2016/02/26 20:17:41 init.go:21: [E] cny:123@tcp(192.168.2.57:3306)/orderv2?charset=utf8&loc=Local
+2016/02/26 20:17:41 conn.go:24: [D] connected to cny:123@tcp(192.168.2.57:3306)/orderv2?charset=utf8&loc=Local
+
+2016/02/26 20:17:41 conn.go:26: [D] ping success
+loading local configure->../../../conf/order.properties
+loading remote configure->http://192.168.2.57:9111/allc.properties
+loading remote configure(http://192.168.2.57:9111/allc.properties) success
+DEM.G_Dsn: cny:123@tcp(192.168.2.57:3306)/orderv2?charset=utf8&loc=Local
+DEM.G_Dsn: cny:123@tcp(192.168.2.57:3306)/orderv2_test?charset=utf8&loc=Local
+2016/02/26 20:17:41 conn.go:24: [D] connected to cny:123@tcp(192.168.2.57:3306)/orderv2_test?charset=utf8&loc=Local
+
+DEM Query(select 1) args([])
+2016/02/26 20:17:41 conn.go:26: [D] ping success
+DEM Query(select 1) args([])
+DEM Query(SELECT COUNT(*) FROM ods_order) args([])
+<nil>
+DEM Query(select 1) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT * FROM UAP_ATTR WHERE TID<?) args([1])
+2016/02/26 20:17:41 alipay_web.go:31: [D] begin remote request
+req:
+2016/02/26 20:17:41 alipay_web.go:37: [E] format err
+.2016/02/26 20:17:41 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:
+2016/02/26 20:17:41 alipay_mobile.go:132: [E] format err
+.
+2 total assertions
+
+2016/02/26 20:17:41 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+.2016/02/26 20:17:41 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.01) 迟到扣200 N NOT_PAY  id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+.
+4 total assertions
+
+2016/02/26 20:17:41 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0.01 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 0 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:41 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:42 model.go:267: [E] sync.SyncUsr seller:DEM CONN_BEGIN_ERR
+..2016/02/26 20:17:42 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.01) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+2016/02/26 20:17:42 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:42 model.go:267: [E] sync.SyncUsr seller:DEM CONN_BEGIN_ERR
+2016/02/26 20:17:42 alipay_mobile.go:154: [E] DealReqData err:%!(EXTRA *errors.errorString=DEM CONN_BEGIN_ERR)
+..
+8 total assertions
+
+2016/02/26 20:17:42 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0.01 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 0 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:42 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:42 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:42 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:42 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2905)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_PASS  0 S 267250 O 0 N 1970-01-17 22:50:34.747 +0800 CST])
+2016/02/26 20:17:42 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:42 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:42 alipay_web.go:83: [D] integral:0.010000,0.000000
+2016/02/26 20:17:42 alipay_web.go:93: [D] Type N
+2016/02/26 20:17:42 alipay_web.go:105: [D] length orderItem:1
+2016/02/26 20:17:42 alipay_web.go:106: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:42 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620174219153 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 0.01 267250 ALIPAYW 438982 USER 2016022620174219153 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 0.01 438982 ALIPAYW 267250 USER 2016022620174219153 NOT_PAY])
+DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016022620174219153 267250 438982 0.01 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+..2016/02/26 20:17:42 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.01) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+2016/02/26 20:17:42 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:43 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:43 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:43 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2906)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_ADDR 广州 0 S 267250 O 0 N 1970-01-17 22:50:34.726 +0800 CST])
+2016/02/26 20:17:44 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:44 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select count(*) from ods_order where ono=?) args([])
+2016/02/26 20:17:44 alipay_mobile.go:211: [D] Type N
+2016/02/26 20:17:44 alipay_mobile.go:222: [D] length orderItem:1
+2016/02/26 20:17:44 alipay_mobile.go:223: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:44 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620174268033 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 0.01 267250 ALIPAYM 438982 USER 2016022620174268033 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 0.01 438982 ALIPAYM 267250 USER 2016022620174268033 NOT_PAY])
+DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016022620174268033 267250 438982 0.01 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+mysign: r9jiK809KY4mf9YKNlTX1IM8uM+tPXKDUsTWSaEOLVQ46F7bVfml8ics//ylVPoPNLgSqKrekLoqUYWIImypmQpZYO5dNwZiFQ5o1Ulsg0xdEUHP6z/Guwf+6L2D6lQxcDpvtKLlofGU2hU9YtN6FfZ+sjTlauD4jqywPcnXArI=
+orderinfo: _input_charset="UTF-8"&body="迟到扣200"&it_b_pay="30m"&notify_url="http://order.dev.jxzy.com/alipay-mobile-notify"&out_trade_no="2016022620174268033"&partner="2088501949844011"&payment_type="1"&seller_id="itdayang@gmail.com"&service="mobile.securitypay.pay"&subject="寻龙诀"&total_fee="0.01"&sign="r9jiK809KY4mf9YKNlTX1IM8uM%2BtPXKDUsTWSaEOLVQ46F7bVfml8ics%2F%2FylVPoPNLgSqKrekLoqUYWIImypmQpZYO5dNwZiFQ5o1Ulsg0xdEUHP6z%2FGuwf%2B6L2D6lQxcDpvtKLlofGU2hU9YtN6FfZ%2BsjTlauD4jqywPcnXArI%3D"&sign_type="RSA"
+..
+12 total assertions
+
+2016/02/26 20:17:44 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":-0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 -0.01 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 0 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:44 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:44 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:44 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:44 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2907)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_PASS  0 S 267250 O 0 N 1970-01-17 22:50:34.747 +0800 CST])
+2016/02/26 20:17:44 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:44 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:45 alipay_web.go:83: [D] integral:-0.010000,0.000000
+2016/02/26 20:17:45 alipay_web.go:93: [D] Type N
+2016/02/26 20:17:45 alipay_web.go:96: [E] 消费金额或积分有误:-0.01
+..2016/02/26 20:17:45 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":-0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=-0.01) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+2016/02/26 20:17:45 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:45 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:45 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:45 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2908)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_PASS  0 S 267250 O 0 N 1970-01-17 22:50:34.747 +0800 CST])
+2016/02/26 20:17:45 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:45 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select count(*) from ods_order where ono=?) args([])
+2016/02/26 20:17:45 alipay_mobile.go:211: [D] Type N
+2016/02/26 20:17:45 alipay_mobile.go:214: [E] 消费金额<=0:-0.01
+2016/02/26 20:17:45 alipay_mobile.go:154: [E] DealReqData err:%!(EXTRA *errors.errorString=TotalFee error)
+..
+16 total assertions
+
+2016/02/26 20:17:45 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 0 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:45 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:46 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:46 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:46 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2909)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_HANDIMG http://u.dev.jxzy.com/dpL9vt== 0 S 267250 O 0 N 1970-01-17 22:50:34.726 +0800 CST])
+2016/02/26 20:17:46 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:46 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:46 alipay_web.go:83: [D] integral:0.000000,0.000000
+2016/02/26 20:17:46 alipay_web.go:93: [D] Type N
+2016/02/26 20:17:46 alipay_web.go:96: [E] 消费金额或积分有误:0
+..2016/02/26 20:17:46 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+2016/02/26 20:17:46 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:46 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:46 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:47 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2910)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_IDFRONTIMG http://u.dev.jxzy.com/dpL9vt== 0 S 267250 O 0 N 1970-01-17 22:50:34.726 +0800 CST])
+2016/02/26 20:17:47 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:47 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select count(*) from ods_order where ono=?) args([])
+2016/02/26 20:17:47 alipay_mobile.go:211: [D] Type N
+2016/02/26 20:17:47 alipay_mobile.go:214: [E] 消费金额<=0:0
+2016/02/26 20:17:47 alipay_mobile.go:154: [E] DealReqData err:%!(EXTRA *errors.errorString=TotalFee error)
+..
+20 total assertions
+
+2016/02/26 20:17:47 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.02,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":1,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0.02 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 1 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:47 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:47 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:47 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:48 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2911)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_IDFRONTIMG http://u.dev.jxzy.com/dpL9vt== 0 S 267250 O 0 N 1970-01-17 22:50:34.726 +0800 CST])
+2016/02/26 20:17:48 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:48 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+2016/02/26 20:17:48 alipay_web.go:83: [D] integral:0.020000,0.010000
+2016/02/26 20:17:48 alipay_web.go:93: [D] Type N
+2016/02/26 20:17:48 alipay_web.go:105: [D] length orderItem:1
+2016/02/26 20:17:48 alipay_web.go:106: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:48 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620174764685 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 1 267250 大洋币 438982 USER 2016022620174764685 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 1 438982 大洋币 267250 USER 2016022620174764685 NOT_PAY])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+DEM Exec(update uap_attr set integral=? where oid=?) args([999 267250])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 0.01 267250 ALIPAYW 438982 USER 2016022620174764685 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 0.01 438982 ALIPAYW 267250 USER 2016022620174764685 NOT_PAY])
+DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016022620174764685 267250 438982 0.02 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+..2016/02/26 20:17:48 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.02,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":1,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.02) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=1) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+2016/02/26 20:17:48 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:48 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:48 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:48 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2912)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 STOKEN 0ca9a4d526c6313203b459694a333a36-974e8dc1-5566-4425-baea-b69210028288 0 S 267250 O 0 N 1970-01-18 04:00:16.684 +0800 CST])
+2016/02/26 20:17:48 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:48 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select count(*) from ods_order where ono=?) args([])
+2016/02/26 20:17:48 alipay_mobile.go:211: [D] Type N
+2016/02/26 20:17:48 alipay_mobile.go:222: [D] length orderItem:1
+2016/02/26 20:17:48 alipay_mobile.go:223: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:48 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620174848738 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 1 267250 大洋币 438982 USER 2016022620174848738 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 1 438982 大洋币 267250 USER 2016022620174848738 NOT_PAY])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+DEM Exec(update uap_attr set integral=? where oid=?) args([998 267250])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 0.01 267250 ALIPAYM 438982 USER 2016022620174848738 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 0.01 438982 ALIPAYM 267250 USER 2016022620174848738 NOT_PAY])
+DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016022620174848738 267250 438982 0.02 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+mysign: FG3DrFtFM/uSKM/pu6yeKMPgzl/PLQH1nuoEK27JzXqDzPGHznsklUUfmesI/pfRteoCoYzcWCwPdIMK9bneu5+weoKCvLmk/lvHRlWlWhLh78LkRSLly+BoxQ/ZIGhYPDycQQqLVBdUp4Ja4BbWWzy0DE8KMP+2uLxOIh30Vio=
+orderinfo: _input_charset="UTF-8"&body="迟到扣200"&it_b_pay="30m"&notify_url="http://order.dev.jxzy.com/alipay-mobile-notify"&out_trade_no="2016022620174848738"&partner="2088501949844011"&payment_type="1"&seller_id="itdayang@gmail.com"&service="mobile.securitypay.pay"&subject="寻龙诀"&total_fee="0.02"&sign="FG3DrFtFM%2FuSKM%2Fpu6yeKMPgzl%2FPLQH1nuoEK27JzXqDzPGHznsklUUfmesI%2FpfRteoCoYzcWCwPdIMK9bneu5%2BweoKCvLmk%2FlvHRlWlWhLh78LkRSLly%2BBoxQ%2FZIGhYPDycQQqLVBdUp4Ja4BbWWzy0DE8KMP%2B2uLxOIh30Vio%3D"&sign_type="RSA"
+..
+24 total assertions
+
+2016/02/26 20:17:48 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":1,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0.01 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 1 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:48 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:49 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:49 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:49 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2913)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 STOKEN 0ca9a4d526c6313203b459694a333a36-974e8dc1-5566-4425-baea-b69210028288 0 S 267250 O 0 N 1970-01-18 04:00:16.684 +0800 CST])
+2016/02/26 20:17:49 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:49 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+2016/02/26 20:17:49 alipay_web.go:83: [D] integral:0.010000,0.010000
+2016/02/26 20:17:49 alipay_web.go:93: [D] Type N
+2016/02/26 20:17:49 alipay_web.go:105: [D] length orderItem:1
+2016/02/26 20:17:49 alipay_web.go:106: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:49 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620174889778 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 1 267250 大洋币 438982 USER 2016022620174889778 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 1 438982 大洋币 267250 USER 2016022620174889778 NOT_PAY])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+DEM Exec(update uap_attr set integral=? where oid=?) args([997 267250])
+DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016022620174889778 267250 438982 0.01 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+..2016/02/26 20:17:49 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":1,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.01) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=1) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+2016/02/26 20:17:49 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:50 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:50 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:50 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2914)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_AGE  0 S 267250 O 0 N 1970-01-18 02:17:53.159 +0800 CST])
+2016/02/26 20:17:50 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:50 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select count(*) from ods_order where ono=?) args([])
+2016/02/26 20:17:50 alipay_mobile.go:211: [D] Type N
+2016/02/26 20:17:50 alipay_mobile.go:222: [D] length orderItem:1
+2016/02/26 20:17:50 alipay_mobile.go:223: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:50 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620174968201 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 1 267250 大洋币 438982 USER 2016022620174968201 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 1 438982 大洋币 267250 USER 2016022620174968201 NOT_PAY])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+DEM Exec(update uap_attr set integral=? where oid=?) args([996 267250])
+DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016022620174968201 267250 438982 0.01 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+mysign: ZYBhmKe6w46lZTDTgXwTBQLvhxN2lddpT6wwc4PzKXfC3I6pRGipmwsCZ1HAYBaY82mGgPOyyinQIF/bVJU3gxP8Tn99c/2YjXOFyOZOVZaET8feas96qOvMMOWKDeGfYwk07JhQ76QdLurOeXwYJSFrmLjoZWoHve1j+taRx0Y=
+orderinfo: _input_charset="UTF-8"&body="迟到扣200"&it_b_pay="30m"&notify_url="http://order.dev.jxzy.com/alipay-mobile-notify"&out_trade_no="2016022620174968201"&partner="2088501949844011"&payment_type="1"&seller_id="itdayang@gmail.com"&service="mobile.securitypay.pay"&subject="寻龙诀"&total_fee="0.01"&sign="ZYBhmKe6w46lZTDTgXwTBQLvhxN2lddpT6wwc4PzKXfC3I6pRGipmwsCZ1HAYBaY82mGgPOyyinQIF%2FbVJU3gxP8Tn99c%2F2YjXOFyOZOVZaET8feas96qOvMMOWKDeGfYwk07JhQ76QdLurOeXwYJSFrmLjoZWoHve1j%2BtaRx0Y%3D"&sign_type="RSA"
+..
+28 total assertions
+
+2016/02/26 20:17:50 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0.01 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 0 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:50 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:51 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:51 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:52 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2915)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 STOKEN 0ca9a4d526c6313203b459694a333a36-974e8dc1-5566-4425-baea-b69210028288 0 S 267250 O 0 N 1970-01-18 04:00:16.684 +0800 CST])
+2016/02/26 20:17:52 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:52 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:52 alipay_web.go:83: [D] integral:0.010000,0.000000
+2016/02/26 20:17:52 alipay_web.go:93: [D] Type N
+2016/02/26 20:17:52 alipay_web.go:105: [D] length orderItem:1
+2016/02/26 20:17:52 alipay_web.go:106: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:52 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620175070340 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 0.01 267250 ALIPAYW 438982 USER 2016022620175070340 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 0.01 438982 ALIPAYW 267250 USER 2016022620175070340 NOT_PAY])
+DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016022620175070340 267250 438982 0.01 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+..2016/02/26 20:17:52 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.01) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+2016/02/26 20:17:52 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:52 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:52 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:52 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2916)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_ADDR 广州市 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/02/26 20:17:52 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:52 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select count(*) from ods_order where ono=?) args([])
+2016/02/26 20:17:52 alipay_mobile.go:211: [D] Type N
+2016/02/26 20:17:52 alipay_mobile.go:222: [D] length orderItem:1
+2016/02/26 20:17:52 alipay_mobile.go:223: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:52 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620175234462 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 0.01 267250 ALIPAYM 438982 USER 2016022620175234462 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 0.01 438982 ALIPAYM 267250 USER 2016022620175234462 NOT_PAY])
+DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016022620175234462 267250 438982 0.01 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+mysign: qWxMpJEhSDjBcGV8cVACDUdroE+UeOLOdjXbf3kLNrkL4eeYJ5/4cNYxSeZJT0hXl1JvGG5Qll4JI6XZOZxu3DwG81i93SXv+CwAKWVjuc1aHgPtHfxrnJqjQB9eJs5X/x7EWbXWL4O2HxoA4jJU9l7k1+aVGRtjz4TuCfUrE58=
+orderinfo: _input_charset="UTF-8"&body="迟到扣200"&it_b_pay="30m"&notify_url="http://order.dev.jxzy.com/alipay-mobile-notify"&out_trade_no="2016022620175234462"&partner="2088501949844011"&payment_type="1"&seller_id="itdayang@gmail.com"&service="mobile.securitypay.pay"&subject="寻龙诀"&total_fee="0.01"&sign="qWxMpJEhSDjBcGV8cVACDUdroE%2BUeOLOdjXbf3kLNrkL4eeYJ5%2F4cNYxSeZJT0hXl1JvGG5Qll4JI6XZOZxu3DwG81i93SXv%2BCwAKWVjuc1aHgPtHfxrnJqjQB9eJs5X%2Fx7EWbXWL4O2HxoA4jJU9l7k1%2BaVGRtjz4TuCfUrE58%3D"&sign_type="RSA"
+..
+32 total assertions
+
+2016/02/26 20:17:52 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":null,"refund":null}
+{ 267250 438982 寻龙诀 0.01 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 0 [] []}
+2016/02/26 20:17:52 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:53 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:53 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:53 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2917)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_ADDR 广州市 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/02/26 20:17:53 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:53 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:53 alipay_web.go:83: [D] integral:0.010000,0.000000
+2016/02/26 20:17:53 alipay_web.go:93: [D] Type N
+2016/02/26 20:17:53 alipay_web.go:105: [D] length orderItem:0
+2016/02/26 20:17:53 alipay_web.go:106: [D] []
+2016/02/26 20:17:53 alipay_web.go:109: [E] OrderItem is nil
+.2016/02/26 20:17:53 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":null,"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.01) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [] []}
+DEM Query(select 1) args([])
+2016/02/26 20:17:53 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:53 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:53 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:54 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2918)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_IDFRONTIMG http://u.dev.jxzy.com/dpL9vt== 0 S 267250 O 0 N 1970-01-17 22:50:34.726 +0800 CST])
+2016/02/26 20:17:54 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:54 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select count(*) from ods_order where ono=?) args([])
+2016/02/26 20:17:54 alipay_mobile.go:211: [D] Type N
+2016/02/26 20:17:54 alipay_mobile.go:222: [D] length orderItem:0
+2016/02/26 20:17:54 alipay_mobile.go:223: [D] []
+2016/02/26 20:17:54 alipay_mobile.go:226: [E] OrderItem is nil
+2016/02/26 20:17:54 alipay_mobile.go:154: [E] DealReqData err:%!(EXTRA *errors.errorString=OrderItem is nil)
+.
+34 total assertions
+
+2016/02/26 20:17:54 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.02,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":3,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0.02 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 3 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:54 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:54 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:54 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:55 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2919)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_PASS  0 S 267250 O 0 N 1970-01-17 22:50:34.747 +0800 CST])
+2016/02/26 20:17:55 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:55 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+.2016/02/26 20:17:55 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.02,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":3,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.02) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=3) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+.
+36 total assertions
+
+2016/02/26 20:17:55 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0.01 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 0 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:55 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:56 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:56 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:56 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2920)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_SCHOOL 2 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/02/26 20:17:56 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:56 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:56 alipay_web.go:83: [D] integral:0.010000,0.000000
+2016/02/26 20:17:56 alipay_web.go:93: [D] Type N
+2016/02/26 20:17:56 alipay_web.go:105: [D] length orderItem:1
+2016/02/26 20:17:56 alipay_web.go:106: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:56 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620175511443 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+2016/02/26 20:17:56 model.go:76: [E] Add OrderItem error DEM query matched error
+2016/02/26 20:17:56 alipay_web.go:125: [E] InsertOrderItem err:DEM query matched error
+.2016/02/26 20:17:56 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.01) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+2016/02/26 20:17:56 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:57 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:57 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:57 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2921)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_ADDR 广州市 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/02/26 20:17:59 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:59 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select count(*) from ods_order where ono=?) args([])
+2016/02/26 20:17:59 alipay_mobile.go:211: [D] Type N
+2016/02/26 20:17:59 alipay_mobile.go:222: [D] length orderItem:1
+2016/02/26 20:17:59 alipay_mobile.go:223: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:17:59 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620175627758 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+2016/02/26 20:17:59 model.go:76: [E] Add OrderItem error DEM query matched error
+2016/02/26 20:17:59 alipay_mobile.go:242: [E] InsertOrderItem err:DEM query matched error
+2016/02/26 20:17:59 alipay_mobile.go:154: [E] DealReqData err:%!(EXTRA *errors.errorString=DEM query matched error)
+.
+38 total assertions
+
+2016/02/26 20:17:59 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0.01 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 0 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:17:59 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:17:59 sync.go:50: [D] SyncMUsr
+2016/02/26 20:17:59 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:18:00 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2922)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 STOKEN 0ca9a4d526c6313203b459694a333a36-974e8dc1-5566-4425-baea-b69210028288 0 S 267250 O 0 N 1970-01-18 04:00:16.684 +0800 CST])
+2016/02/26 20:18:00 sync.go:50: [D] SyncMUsr
+2016/02/26 20:18:00 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:18:00 alipay_web.go:83: [D] integral:0.010000,0.000000
+2016/02/26 20:18:00 alipay_web.go:93: [D] Type N
+2016/02/26 20:18:00 alipay_web.go:105: [D] length orderItem:1
+2016/02/26 20:18:00 alipay_web.go:106: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:18:00 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620175937859 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 0.01 267250 ALIPAYW 438982 USER 2016022620175937859 NOT_PAY])
+2016/02/26 20:18:00 model.go:62: [E] Add ods_record buyer error DEM query matched error
+2016/02/26 20:18:00 model.go:123: [E] insertRecord: DEM query matched error
+2016/02/26 20:18:00 alipay_web.go:146: [E] InsertWithRMB: DEM query matched error
+.2016/02/26 20:18:00 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.01) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+2016/02/26 20:18:00 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:18:00 sync.go:50: [D] SyncMUsr
+2016/02/26 20:18:00 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:18:01 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2923)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_NAME 林杰 0 S 267250 O 0 N 1970-01-17 22:50:34.726 +0800 CST])
+2016/02/26 20:18:01 sync.go:50: [D] SyncMUsr
+2016/02/26 20:18:01 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select count(*) from ods_order where ono=?) args([])
+2016/02/26 20:18:01 alipay_mobile.go:211: [D] Type N
+2016/02/26 20:18:01 alipay_mobile.go:222: [D] length orderItem:1
+2016/02/26 20:18:01 alipay_mobile.go:223: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:18:01 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620180091867 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 0.01 267250 ALIPAYM 438982 USER 2016022620180091867 NOT_PAY])
+2016/02/26 20:18:01 model.go:62: [E] Add ods_record buyer error DEM query matched error
+2016/02/26 20:18:01 model.go:123: [E] insertRecord: DEM query matched error
+2016/02/26 20:18:01 alipay_mobile.go:262: [E] InsertWithRMB: DEM query matched error
+2016/02/26 20:18:01 alipay_mobile.go:154: [E] DealReqData err:%!(EXTRA *errors.errorString=DEM query matched error)
+.
+40 total assertions
+
+2016/02/26 20:18:01 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.02,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":1,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 寻龙诀 0.02 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 1 [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}] []}
+2016/02/26 20:18:01 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:18:01 sync.go:50: [D] SyncMUsr
+2016/02/26 20:18:01 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:18:02 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2924)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_SEX 男 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/02/26 20:18:02 sync.go:50: [D] SyncMUsr
+2016/02/26 20:18:02 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+2016/02/26 20:18:02 alipay_web.go:83: [D] integral:0.020000,0.010000
+2016/02/26 20:18:02 alipay_web.go:93: [D] Type N
+2016/02/26 20:18:02 alipay_web.go:105: [D] length orderItem:1
+2016/02/26 20:18:02 alipay_web.go:106: [D] [{ 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/02/26 20:18:02 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016022620180165742 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 1 267250 大洋币 438982 USER 2016022620180165742 NOT_PAY])
+2016/02/26 20:18:02 model.go:62: [E] Add ods_record buyer error DEM query matched error
+2016/02/26 20:18:02 model.go:99: [E] insertRecord: DEM query matched error
+2016/02/26 20:18:02 alipay_web.go:135: [E] InsertWithIntegral: DEM query matched error
+.2016/02/26 20:18:02 alipay_mobile.go:126: [D] begin GetRsaSignJson remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"寻龙诀","totalFee":0.02,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":1,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) 寻龙诀 %!s(float64=0.02) 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=1) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([267250])
+2016/02/26 20:18:02 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:18:03 sync.go:50: [D] SyncMUsr
+2016/02/26 20:18:03 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/26 20:18:03 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,2925)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_HEIGHT  0 S 267250 O 0 N 1970-01-18 02:17:44.874 +0800 CST])

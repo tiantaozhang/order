@@ -1,0 +1,77 @@
+2016/03/01 18:15:05 alipay_web.go:31: [D] begin remote request
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"天地一号","totalFee":0.01,"body":"迟到扣200","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":100000,"p_name":"balabalabala","p_id":11111,"p_type":"","p_img":"","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+{ 267250 438982 天地一号 0.01 迟到扣200 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 0 [{ 100000 balabalabala 11111   1 TEST 0 0.01 N N}] []}
+2016/03/01 18:15:05 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:05 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:05 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:06 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3269)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_SEX 男 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/03/01 18:15:06 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:06 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:06 alipay_web.go:83: [D] integral:0.010000,0.000000
+2016/03/01 18:15:06 alipay_web.go:93: [D] Type N
+2016/03/01 18:15:06 alipay_web.go:105: [D] length orderItem:1
+2016/03/01 18:15:06 alipay_web.go:106: [D] [{ 100000 balabalabala 11111   1 TEST 0 0.01 N N}]
+DEM Query(select 1) args([])
+2016/03/01 18:15:06 alipay_web.go:617: [D] select aval from ods_order_env where akey ='TEST'
+DEM Query(select aval from ods_order_env where akey ='TEST') args([])
+DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016030118150567031 100000 balabalabala 11111   1 TEST 0 0.01 N N])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([天地一号 INCOME 0.01 267250 ALIPAYW 438982 USER 2016030118150567031 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([天地一号 PAY 0.01 438982 ALIPAYW 267250 USER 2016030118150567031 NOT_PAY])
+DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016030118150567031 267250 438982 0.01 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+DEM Query(select ono from ods_order_item where oid=?) args([100000])
+DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016030118150567031])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([PAID PAID 2016030118150567031 267250])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([INCOME PAID 2016030118150567031 438982])
+DEM Exec(update ods_order set status=? where ono =?) args([PAID 2016030118150567031])
+DEM Exec(update ods_order set wno=NULL where ono =?) args([2016030118150567031])
+2016/03/01 18:15:06 thdPayAbout.go:21: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150567031])
+DEM Query(select expand from ods_order where ono=?) args([2016030118150567031])
+strurl:/usr/purchase-course?id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35
+2016/03/01 18:15:06 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35: unsupported protocol scheme ""
+2016/03/01 18:15:06 thdPayAbout.go:107: [D] callback=false

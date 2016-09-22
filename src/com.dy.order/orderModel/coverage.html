@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">order/src/com.dy.order/orderModel/model.go (90.6%)</option>
+				
+				<option value="file1">order/src/com.dy.order/orderModel/thdPayAbout.go (90.3%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" >package orderModel
+
+import (
+        "com.dy.order/common"
+        //"com.dy.order/conf"
+        "database/sql"
+        //"encoding/json"
+        "errors"
+        //"fmt"
+        "fmt"
+        //"github.com/Centny/gwf/dbutil"
+        "github.com/Centny/gwf/log"
+        "math/rand"
+        "org.cny.uap/sync"
+        "time"
+        //"io/ioutil"
+        //"net/http"
+)
+
+func NewOrderNo() string <span class="cov8" title="1">{
+        return fmt.Sprintf("%s%d", time.Now().Format("20060102150405"), RandInt(10000, 99999))
+}</span>
+
+func RandInt(min int, max int) int <span class="cov8" title="1">{
+        if max-min &lt;= 0 </span><span class="cov0" title="0">{
+                return min
+        }</span>
+        <span class="cov8" title="1">rand.Seed(time.Now().UTC().UnixNano())
+        return min + rand.Intn(max-min)</span>
+}
+
+func CheckIsExist(db *sql.DB, ono string, p_id int64, schema string) (bl bool, err error) <span class="cov8" title="1">{
+        //db := common.DbConn()
+        IdCount := int64(0)
+        //tid := int64(0)
+        if p_id == 0 </span><span class="cov8" title="1">{
+                checkIdSql := "select count(*) from " + schema + " where ono=?"
+                //checkIdSql := "select tid,count(*) from " + schema + " where ono=?"
+                if err = db.QueryRow(checkIdSql, ono).Scan(&amp;IdCount); err != nil </span><span class="cov8" title="1">{
+                        return false, err
+                }</span>
+        }<span class="cov8" title="1"> else {
+                checkIdSql := "select count(*) from " + schema + " where ono=? and p_id=?"
+                if err = db.QueryRow(checkIdSql, ono, p_id).Scan(&amp;IdCount); err != nil </span><span class="cov0" title="0">{
+                        return false, err
+                }</span>
+        }
+        // if err != nil {
+        //         return false, err
+        // }
+        <span class="cov8" title="1">if IdCount == 0 </span><span class="cov8" title="1">{
+                return false, nil
+        }</span>
+        <span class="cov8" title="1">return true, nil</span>
+}
+
+func InsertRecord(tx *sql.Tx, name string, Type string, money float64, uid int64, pay_type string, target_id int64, target_type string, ono string, status string) (bool, error) <span class="cov8" title="1">{
+        _sql := `insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)`
+        //buyer
+        _, err := tx.Exec(_sql, name, Type, money, uid, pay_type, target_id, target_type, ono, status)
+        if err != nil </span><span class="cov8" title="1">{
+                log.E("Add ods_record buyer error %v", err.Error())
+                tx.Rollback()
+                return false, err
+        }</span>
+        //seller
+        <span class="cov8" title="1">return true, nil</span>
+}
+
+func InsertOrderItem(tx *sql.Tx, js CommonRemoteReqStruct, ono string) error <span class="cov8" title="1">{
+
+        for i := 0; i &lt; len(js.OrderItem); i++ </span><span class="cov8" title="1">{
+                _sql := `insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)`
+                _, err := tx.Exec(_sql, ono, js.OrderItem[i].Oid, js.OrderItem[i].P_name, js.OrderItem[i].P_id, js.OrderItem[i].P_type, js.OrderItem[i].P_img, js.OrderItem[i].P_count, js.OrderItem[i].P_from, js.OrderItem[i].Notified, js.OrderItem[i].Price, js.Type, js.OrderItem[i].Status)
+                if err != nil </span><span class="cov8" title="1">{
+                        log.E("Add OrderItem error %v", err.Error())
+                        tx.Rollback()
+                        return err
+                }</span>
+        }
+        <span class="cov8" title="1">return nil</span>
+}
+
+func InsertOdsOrder(tx *sql.Tx, js CommonRemoteReqStruct, ono string) error <span class="cov8" title="1">{
+        _sql := `insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)`
+        _, err := tx.Exec(_sql, ono, js.Buyer, js.Seller, js.TotalFee, js.Type, js.Status, js.Return_url, js.Expand)
+        if err != nil </span><span class="cov8" title="1">{
+                log.E("Add Order error %v", err.Error())
+                tx.Rollback()
+                return err
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+/*有积分*/
+func InsertWithIntegral(tx *sql.Tx, js CommonRemoteReqStruct, ono string) error <span class="cov8" title="1">{
+        //uid--&gt;buyer  target_id--&gt;seller
+        if bl, err := InsertRecord(tx, js.Subject, "INCOME", float64(js.Integral), js.Buyer, "大洋币", js.Seller, "USER", ono, "NOT_PAY"); bl != true </span><span class="cov8" title="1">{
+                log.E("insertRecord: %v", err.Error())
+                tx.Rollback()
+                return err
+        }</span>
+        //uid--&gt;seller  target_id--&gt;buyer
+        <span class="cov8" title="1">if bl, err := InsertRecord(tx, js.Subject, "PAY", float64(js.Integral), js.Seller, "大洋币", js.Buyer, "USER", ono, "NOT_PAY"); bl != true </span><span class="cov0" title="0">{
+                log.E("insertRecord: %v", err.Error())
+                tx.Rollback()
+                return err
+        }</span>
+        //deduct
+        <span class="cov8" title="1">_n_integral := ^js.Integral + 1
+        if bl, err := UpdateIntegral(tx, _n_integral, js.Buyer); bl != true </span><span class="cov8" title="1">{
+                log.E("UpdateIntegral: %v", err.Error())
+                tx.Rollback()
+                return err
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+func InsertWithRMB(tx *sql.Tx, js CommonRemoteReqStruct, ono string, _needpay float64) error <span class="cov8" title="1">{
+        //record
+        //uid--&gt;buyer  target_id--&gt;seller
+        if bl, err := InsertRecord(tx, js.Subject, "INCOME", _needpay, js.Buyer, "ALIPAY", js.Seller, "USER", ono, "NOT_PAY"); bl != true </span><span class="cov8" title="1">{
+                log.E("insertRecord: %v", err.Error())
+                tx.Rollback()
+                return err
+        }</span>
+        //add integral
+        //uid--&gt;seller  target_id--&gt;buyer
+        <span class="cov8" title="1">if bl, err := InsertRecord(tx, js.Subject, "PAY", _needpay, js.Seller, "ALIPAY", js.Buyer, "USER", ono, "NOT_PAY"); bl != true </span><span class="cov0" title="0">{
+                log.E("insertRecord: %v", err.Error())
+                tx.Rollback()
+                return err
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+/*
+_integral 负数减积分
+*/
+func UpdateIntegral(tx *sql.Tx, _integral int64, tid int64) (bool, error) <span class="cov8" title="1">{
+
+        _score, err := GetIntegral(common.DbConn(), tid)
+        if err != nil </span><span class="cov8" title="1">{
+                tx.Rollback()
+                log.E("GetIntegral err: %v", err.Error())
+                return false, err
+        }</span>
+        <span class="cov8" title="1">_updateIntegral := _score + _integral
+        _sql := `update uap_attr set integral=? where oid=?`
+        _, err = tx.Exec(_sql, _updateIntegral, tid)
+        if err != nil </span><span class="cov0" title="0">{
+                log.E("update uap_attr integral %v", err.Error())
+                tx.Rollback()
+                return false, err
+        }</span>
+        <span class="cov8" title="1">return true, nil</span>
+}
+
+func GetIntegral(db *sql.DB, uid int64) (int64, error) <span class="cov8" title="1">{
+        var _score int64 = 0
+        _sql := `select integral from uap_attr where oid=?`
+        if err := db.QueryRow(_sql, uid).Scan(&amp;_score); err != nil </span><span class="cov8" title="1">{
+                log.E("getIntegral :%v", err.Error())
+                return _score, err
+        }</span>
+        <span class="cov8" title="1">return _score, nil</span>
+
+}
+
+func DetectIntegral(db *sql.DB, integral int64, buyer int64, totalFee float64) error <span class="cov8" title="1">{
+        //检测积分
+        if integral &gt; 0 </span><span class="cov8" title="1">{
+                if s, err := GetIntegral(db, buyer); err != nil </span><span class="cov8" title="1">{
+                        return err
+                }</span><span class="cov8" title="1"> else if s &lt; integral </span><span class="cov8" title="1">{
+                        return errors.New("积分不足")
+                }</span><span class="cov8" title="1"> else if totalFee &lt; float64(integral)/100.0 </span><span class="cov8" title="1">{
+                        return errors.New("总额比积分少")
+                }</span>
+        }
+        <span class="cov8" title="1">return nil</span>
+}
+
+func PayTypeAndNeedPay(integral int64, totalFee float64) (float64, float64, int) <span class="cov8" title="1">{
+        //integral 假定1=＝1分
+        _integral := float64(integral) / 100.0
+        _needpay := totalFee - _integral
+        _payway := NORMAL //0:正常支付 1:有积分有💰 2:全积分
+        totalFee = _needpay
+        if 0 == _needpay </span><span class="cov8" title="1">{
+                _payway = INTEGRALONLY
+        }</span><span class="cov8" title="1"> else if _needpay &gt; 0 &amp;&amp; integral &gt; 0 </span><span class="cov8" title="1">{
+                _payway = BOTH
+        }</span>
+        <span class="cov8" title="1">return _integral, _needpay, _payway</span>
+}
+
+func UpdateRecord(tx *sql.Tx, Type string, status string, uid int64, ono string) (bool, error) <span class="cov8" title="1">{
+
+        _sql := `update ods_record set type=?,status=? where ono=? and uid=?`
+        _, err := tx.Exec(_sql, Type, status, ono, uid)
+        if err != nil </span><span class="cov8" title="1">{
+                log.E("update ods_record buyer or seller error %v", err.Error())
+                tx.Rollback()
+                return false, err
+        }</span>
+        <span class="cov8" title="1">return true, nil</span>
+}
+
+func CheckParas(js CommonRemoteReqStruct) error <span class="cov8" title="1">{
+        if "" == js.Return_url || "" == js.Expand </span><span class="cov8" title="1">{
+                return errors.New("return_url || expand is nil")
+        }</span>
+        <span class="cov8" title="1">if js.Buyer &lt;= int64(0) || js.Seller &lt;= int64(0) </span><span class="cov8" title="1">{
+                return errors.New("buyer || seller is nil")
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+func SynUser(seller, buyer int64) error <span class="cov8" title="1">{
+        log.D("seller:%d,buyer:%d", seller, buyer)
+        if _, err := sync.SyncUsr(seller, ""); err != nil </span><span class="cov8" title="1">{
+                log.E("sync.SyncUsr seller:%v", err.Error())
+                return err
+        }</span>
+        <span class="cov8" title="1">if _, err := sync.SyncUsr(buyer, ""); err != nil </span><span class="cov8" title="1">{
+                log.E("sync.SyncUsr buyer:%v", err.Error())
+                return err
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+// type TSt struct {
+//         Tid int64 `m2s:"TID"`
+// }
+
+// func ListData() error {
+//         ts := []TSt{}
+//         err := dbutil.DbQueryS(common.DbConn(), &amp;ts, "select tid from ods_order where tid&gt;?", 1)
+//         if err != nil {
+//                 log.D("Err:%v", err.Error())
+//                 return err
+//         }
+//         return nil
+// }
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package orderModel
+
+import (
+        "com.dy.order/common"
+        "errors"
+        "github.com/Centny/gwf/log"
+        //"com.dy.tool/dbMgr"
+        "net/http"
+        //"net/url"
+        "com.dy.order/conf"
+        "encoding/json"
+        "fmt"
+        "io/ioutil"
+        "time"
+)
+
+/*
+callback
+*/
+func Callback(ono string) (bl bool, err error) <span class="cov8" title="1">{
+        log.D("callback")
+        var strurl1 string
+        var strurl2 string
+
+        strurl := fmt.Sprintf("%s%s", `http://`, conf.Rcp_host())
+        db := common.DbConn()
+        _sql := `select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)`
+        if err := db.QueryRow(_sql, ono).Scan(&amp;strurl1); err != nil </span><span class="cov8" title="1">{
+                log.E("query aval err in ods_order_env")
+                return false, err
+        }</span>
+        <span class="cov8" title="1">_sql = `select expand from ods_order where ono=?`
+        if err := db.QueryRow(_sql, ono).Scan(&amp;strurl2); err != nil </span><span class="cov8" title="1">{
+                log.E("query aval err in ods_order")
+                return false, err
+        }</span>
+        <span class="cov8" title="1">strurl = strurl + strurl1 + strurl2
+        //Rcp_host
+
+        fmt.Printf("strurl:%s\n", strurl)
+        if strurl != "" </span><span class="cov8" title="1">{
+                res, err := http.Get(strurl)
+                if err != nil </span><span class="cov8" title="1">{
+                        log.E("callback:get err:%s", err.Error())
+                        return false, err
+                }</span>
+                <span class="cov8" title="1">defer res.Body.Close()
+                got, err := ioutil.ReadAll(res.Body)
+                var cb CBStruct
+                if err := json.Unmarshal(got, &amp;cb); err != nil </span><span class="cov0" title="0">{
+                        log.E("json err:%s", err.Error())
+                        return false, nil
+                }</span>
+                <span class="cov8" title="1">log.D("cb.Code:%v,cb.Data:%v", cb.Code, cb.Data)
+                if cb.Code == int64(0) </span><span class="cov0" title="0">{
+                        return true, nil
+                }</span>
+                <span class="cov8" title="1">return false, nil</span>
+        }
+        //如果没返回，就不管
+        <span class="cov0" title="0">return true, nil</span>
+        //id=40001&amp;token=5e6248a918eb211ab85381c6499adeb8-db481955-9910-4db3-aa6c-b401f3831743
+}
+
+func IfAlipaySuccessFail(name string, Type string, money float64, pay_type string, targetid string, target_type string, ono string, status string) <span class="cov8" title="1">{
+        //        conn = dbMgr.DbConn()
+        log.D("数据库出错，后续处理中")
+        go func() </span><span class="cov8" title="1">{
+                timer := time.NewTicker(5 * time.Second)
+                i := 0
+                for </span><span class="cov8" title="1">{
+                        select </span>{
+                        <span class="cov8" title="1">case &lt;-timer.C:
+                                if i &lt; 5 </span><span class="cov8" title="1">{
+                                        i++
+                                }</span><span class="cov0" title="0"> else {
+                                        return
+                                }</span>
+                                <span class="cov8" title="1">if bl, _ := AlipayPaySuccess(name, Type, money, pay_type, targetid, target_type, ono, status); bl </span><span class="cov0" title="0">{
+                                        timer.Stop()
+                                        return
+                                }</span>
+                        }
+                }
+        }()
+}
+
+/*
+func:after pay success,but not refund
+*/
+func AlipayPaySuccess(name string, Type string, money float64, pay_type string, targetid string, target_type string, ono string, status string) (bool, error) <span class="cov8" title="1">{
+        callback := false
+        defer func() </span><span class="cov8" title="1">{
+                if callback == true </span><span class="cov8" title="1">{
+                        if bl, _ := Callback(ono); bl != true </span><span class="cov8" title="1">{
+                                log.D("callback=false")
+                                go func(ono string) </span><span class="cov8" title="1">{
+                                        log.D("回调出错，后续处理中")
+                                        timer := time.NewTimer(5 * time.Second)
+                                        i := 0
+                                        for </span><span class="cov8" title="1">{
+                                                select </span>{
+                                                <span class="cov8" title="1">case &lt;-timer.C:
+                                                        if i &gt;= 5 </span><span class="cov0" title="0">{
+                                                                timer.Stop()
+                                                                return
+                                                        }</span><span class="cov8" title="1"> else {
+                                                                i++
+                                                        }</span>
+                                                        <span class="cov8" title="1">if bl, _ := Callback(ono); bl </span><span class="cov0" title="0">{
+                                                                timer.Stop()
+                                                                return
+                                                        }</span>
+                                                }
+                                        }
+                                }(ono)
+                        }<span class="cov0" title="0"> else {
+                                log.D("callback=true")
+                        }</span>
+                }
+        }()
+
+        <span class="cov8" title="1">db := common.DbConn()
+        tx, _ := db.Begin()
+        var uid int64
+        var target_id int64
+        // var imoney float64
+        // var buyer int64
+        _sql := `select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc`
+        err := tx.QueryRow(_sql, ono).Scan(&amp;uid, &amp;target_id)
+        //err1 := tx.QueryRow(_sql, ono).Scan(&amp;target_id)
+        if err != nil /*|| err1 != nil*/ </span><span class="cov8" title="1">{
+                log.E("Query ods_record uid ,target_id error %v", err.Error())
+                tx.Rollback()
+                return false, errors.New("Query record uid,target_id error")
+        }</span>
+        <span class="cov8" title="1">if uid == 0 || target_id == 0 </span><span class="cov0" title="0">{
+                tx.Rollback()
+                return false, errors.New("uid or target not exist")
+        }</span>
+        //integral
+        //
+
+        //buyer--&gt;uid  record
+        <span class="cov8" title="1">Type = "PAID"
+        sts := "PAID"
+        if bl, err := UpdateRecord(tx, Type, sts, uid, ono); bl != true </span><span class="cov8" title="1">{
+                return false, err
+        }</span>
+        //seller--&gt;uid  record
+        <span class="cov8" title="1">Type = "INCOME"
+        if bl, err := UpdateRecord(tx, Type, sts, target_id, ono); bl != true </span><span class="cov0" title="0">{
+                return false, err
+        }</span>
+
+        <span class="cov8" title="1">_sql = `update ods_order set status=? where ono =?`
+        _, err = tx.Exec(_sql, status, ono)
+        if err != nil </span><span class="cov8" title="1">{
+                log.E("Add ods_record error %v", err.Error())
+                tx.Rollback()
+                return false, err
+        }</span>
+        <span class="cov8" title="1">_sql = `update ods_order set wno=NULL where ono =?`
+        _, err = tx.Exec(_sql, ono)
+        if err != nil </span><span class="cov8" title="1">{
+                log.E("Add ods_record error %v", err.Error())
+                tx.Rollback()
+                return false, err
+        }</span>
+        <span class="cov8" title="1">err = tx.Commit()
+        if err != nil </span><span class="cov8" title="1">{
+                log.E("AlipayPaySuccess commit error %v", err.Error())
+                tx.Rollback()
+                return false, err
+        }</span>
+        <span class="cov8" title="1">callback = true
+        return true, nil</span>
+
+}
+
+func DealAliReturn(r *http.Request) (callbackMsg string) <span class="cov8" title="1">{
+        trade_status := r.FormValue("trade_status")
+        out_trade_no := r.FormValue("out_trade_no")
+        buyer_email := r.FormValue("buyer_email")
+        subject := r.FormValue("subject")
+        log.D("buyer_email is : %v ", buyer_email)
+        log.D("subject is : %v ", subject)
+        log.D("trade_status is : %v ", trade_status)
+        log.D("out_trade_no is : %v ", out_trade_no)
+
+        var total_fee float64
+        fmt.Sscanf(r.FormValue("total_fee"), "%f", &amp;total_fee)
+
+        if trade_status == "TRADE_SUCCESS" </span><span class="cov8" title="1">{
+                //todo : deal the order
+                log.D("trade_success in webreturn")
+                var rurl string
+                _sql := `select return_url from ods_order where ono=?`
+                errR := common.DbConn().QueryRow(_sql, out_trade_no).Scan(&amp;rurl)
+                if errR != nil </span><span class="cov8" title="1">{
+                        log.E("can't find return_url in order")
+                        callbackMsg = "没有回调地址，请联系客服"
+                        return
+                }</span>
+                <span class="cov8" title="1">strUrl := fmt.Sprintf("location.href='%s'", rurl)
+                callbackMsg = "&lt;html&gt;"
+                callbackMsg += "&lt;head&gt;"
+                callbackMsg += "&lt;script type='text/javascript'&gt;"
+                callbackMsg += strUrl
+                callbackMsg += "&lt;/script&gt;"
+                callbackMsg += "&lt;/head&gt;"
+                callbackMsg += "&lt;body&gt;"
+
+                callbackMsg += "&lt;/body&gt;"
+                callbackMsg += "&lt;/html&gt;"</span>
+        }
+
+        <span class="cov8" title="1">if trade_status == "TRADE_FINISHED" </span><span class="cov8" title="1">{
+
+        }</span>
+        <span class="cov8" title="1">return</span>
+}
+
+func DealAliNotify(r *http.Request, pay_type string, from string) <span class="cov8" title="1">{
+
+        trade_status := r.FormValue("trade_status") //-
+        out_trade_no := r.FormValue("out_trade_no") //ono
+        buyer_email := r.FormValue("buyer_email")   //-
+        subject := r.FormValue("subject")           //name
+        sellerId := r.FormValue("seller_id")        //targetid
+        buyerId := r.FormValue("buyer_id")          //-
+        //pay_type := `ALIPAY`
+        target_type := "USER"
+        Type := "INCOMING" //PAY|INCOMING|REFUND
+        //status := "N"
+        status := "PAID" //改N-&gt;PAID
+        var total_fee float64
+        fmt.Sscanf(r.FormValue("total_fee"), "%f", &amp;total_fee)
+
+        log.D("call from is: %v", from)
+        log.D("trade_status is : %v ", trade_status)
+        log.D("out_trade_no is : %v ", out_trade_no)
+        log.D("buyer_email is : %v ", buyer_email)
+        log.D("subject is : %v ", subject)
+        log.D("total_fee is %v ", total_fee)
+        log.D("buyerId is %v", buyerId)
+
+        //判断该笔订单是否在商户网站中已经做过处理
+        //如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序
+        //如果有做过处理，不执行商户的业务程序
+
+        //注意：
+        //该种交易状态只在一种情况下出现——开通了高级即时到账，买家付款成功后。
+
+        if trade_status == "TRADE_SUCCESS" </span><span class="cov8" title="1">{
+                log.D("TRADE_SUCCESS,处理订单中...")
+                if bl, _ := AlipayPaySuccess(subject, Type, total_fee, pay_type, sellerId, target_type, out_trade_no, status); bl != true </span><span class="cov8" title="1">{
+                        IfAlipaySuccessFail(subject, Type, total_fee, pay_type, sellerId, target_type, out_trade_no, status)
+                }</span>
+        }
+
+        //判断是否已做操作
+
+        //判断该笔订单是否在商户网站中已经做过处理
+        //如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序
+        //如果有做过处理，不执行商户的业务程序
+
+        //注意：
+        //1、开通了普通即时到账，买家付款成功后。
+        //该种交易状态只在两种情况下出现
+        //2、开通了高级即时到账，从该笔交易成功时间算起，过了签约时的可退款时限（如：三个月以内可退款、一年以内可退款等）后。
+
+        <span class="cov8" title="1">if trade_status == "TRADE_FINISHED" </span><span class="cov8" title="1">{
+
+        }</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible = document.getElementById('file0');
+		files.addEventListener('change', onChange, false);
+		function onChange() {
+			visible.style.display = 'none';
+			visible = document.getElementById(files.value);
+			visible.style.display = 'block';
+			window.scrollTo(0, 0);
+		}
+	})();
+	</script>
+</html>

@@ -1,0 +1,502 @@
+=== RUN TestCheckIsExistAndInsertDB
+loading local configure->../../../conf/order.properties
+loading remote configure->http://192.168.2.57:9111/allc.properties
+loading remote configure(http://192.168.2.57:9111/allc.properties) success
+DEM.G_Dsn: cny:123@tcp(192.168.2.57:3306)/orderv2?charset=utf8&loc=Local
+DEM.G_Dsn: cny:123@tcp(192.168.2.57:3306)/orderv2_test?charset=utf8&loc=Local
+2016/02/02 12:42:00 conn.go:24: [D] connected to cny:123@tcp(192.168.2.57:3306)/orderv2_test?charset=utf8&loc=Local
+
+DEM Query(select 1) args([])
+2016/02/02 12:42:00 conn.go:26: [D] ping success
+DEM Query(select 1) args([])
+DEM Query(SELECT COUNT(*) FROM ods_order) args([])
+<nil>
+DEM Query(select 1) args([])
+t_open: &{0xc20803d020 cny:123@tcp(192.168.2.57:3306)/orderv2_test?charset=utf8&loc=Local {0 0} [] [] 0 0 0xc208030600 false map[] map[] 0 0}
+DEM Query(select 1) args([])
+DEM Query(SELECT * FROM UAP_ATTR WHERE TID<?) args([1])
+ono: 2016020212420099640
+
+  CheckIsExist DEM Query(select count(*) from ods_order where ono=?) args([2016020212420099640])
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+1 total assertion[0m
+
+
+  checkExist err DEM Query(select count(*) from ods_order_item where ono=? and p_id=?) args([2016020212420099640 41890])
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+2 total assertions[0m
+
+
+  checkExist err DEM Query(select count(*) from ods_order where ono=?) args([])
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+3 total assertions[0m
+
+
+  checkExist err1 DEM Query(select count(*) from ods_order where ono=?) args([2016020212420099640])
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+4 total assertions[0m
+
+--- PASS: TestCheckIsExistAndInsertDB (0.19s)
+=== RUN TestIntegral
+
+  GetIntegral N [32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+6 total assertions[0m
+
+
+  DetectIntegral N [32m✔[0m
+
+[31m[0m[33m[0m[32m
+7 total assertions[0m
+
+
+  Integral not enough [32m✔[0m
+
+[31m[0m[33m[0m[32m
+8 total assertions[0m
+
+
+  DetectIntegral buyer err 2016/02/02 12:42:00 model.go:194: [E] getIntegral :sql: no rows in result set
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+9 total assertions[0m
+
+
+  DetectIntegral totalFee err [32m✔[0m
+
+[31m[0m[33m[0m[32m
+10 total assertions[0m
+
+--- PASS: TestIntegral (0.03s)
+=== RUN TestPay
+
+  PayTypeAndNeedPay total igral [32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+12 total assertions[0m
+
+
+  PayTypeAndNeedPay total igral [32m✔[0m
+
+[31m[0m[33m[0m[32m
+13 total assertions[0m
+
+
+  PayTypeAndNeedPay total igral [32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+15 total assertions[0m
+
+--- PASS: TestPay (0.00s)
+=== RUN TestTx
+
+  insertOdsOrder N DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016020212420099640 41890 438982 0.11 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+16 total assertions[0m
+
+
+  insertOdsOrder err DEM Exec(insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)) args([2016020212420099640 41890 438982 0.11 N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35])
+2016/02/02 12:42:00 model.go:105: [E] Add Order error DEM query matched error
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+17 total assertions[0m
+
+
+  InsertOrderItem N DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016020212420099640 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+18 total assertions[0m
+
+
+  InsertOrderItem err DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016020212420099640 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+2016/02/02 12:42:00 model.go:90: [E] Add OrderItem error DEM query matched error
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+19 total assertions[0m
+
+
+  InsertWithIntegral N DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 10 41890 大洋币 438982 USER 2016020212420099640 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 10 438982 大洋币 41890 USER 2016020212420099640 NOT_PAY])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([41890])
+DEM Exec(update uap_attr set integral=? where oid=?) args([990 41890])
+[32m✔[0mDEM Query(select integral from uap_attr where oid=?) args([41890])
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+21 total assertions[0m
+
+
+  InsertWithIntegral updateErr DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 10 102938 大洋币 438982 USER 2016020212420099640 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 10 438982 大洋币 102938 USER 2016020212420099640 NOT_PAY])
+DEM Query(select 1) args([])
+DEM Query(select integral from uap_attr where oid=?) args([102938])
+2016/02/02 12:42:00 model.go:194: [E] getIntegral :sql: no rows in result set
+2016/02/02 12:42:00 model.go:171: [E] GetIntegral err: sql: no rows in result set
+2016/02/02 12:42:00 model.go:135: [E] UpdateIntegral: sql: no rows in result set
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+22 total assertions[0m
+
+
+  InsertWithIntegral err 2016/02/02 12:42:00 model.go:72: [E] Add ods_record buyer error sql: Transaction has already been committed or rolled back
+2016/02/02 12:42:00 model.go:118: [E] insertRecord: sql: Transaction has already been committed or rolled back
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+23 total assertions[0m
+
+
+  InsertOrderItem err DEM Exec(insert into ods_order_item(ono,oid,p_name,p_id,p_type,p_img,p_count,p_from,notified,price,type,status) value(?,?,?,?,?,?,?,?,?,?,?,?)) args([2016020212420099640 1 物品1 1  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 1 TEST 0 0.01 N N])
+2016/02/02 12:42:00 model.go:90: [E] Add OrderItem error DEM query matched error
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+24 total assertions[0m
+
+
+  InsertWithRMB N DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 INCOME 0.01 41890 ALIPAY 438982 USER 2016020212420099640 NOT_PAY])
+DEM Exec(insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)) args([寻龙诀 PAY 0.01 438982 ALIPAY 41890 USER 2016020212420099640 NOT_PAY])
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+25 total assertions[0m
+
+
+  InsertWithRMB N 2016/02/02 12:42:00 model.go:72: [E] Add ods_record buyer error sql: Transaction has already been committed or rolled back
+2016/02/02 12:42:00 model.go:148: [E] insertRecord: sql: Transaction has already been committed or rolled back
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+26 total assertions[0m
+
+
+  CheckParas N [32m✔[0m
+
+[31m[0m[33m[0m[32m
+27 total assertions[0m
+
+
+  CheckParas err [32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+29 total assertions[0m
+
+
+  CheckParas err [32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+31 total assertions[0m
+
+
+  UpdateRecord err 2016/02/02 12:42:00 model.go:256: [E] update ods_record buyer or seller error sql: Transaction has already been committed or rolled back
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+32 total assertions[0m
+
+
+  UpdateRecord N [32m✔[0m
+
+[31m[0m[33m[0m[32m
+33 total assertions[0m
+
+--- PASS: TestTx (0.15s)
+=== RUN TestSyn
+
+  syn 2016/02/02 12:42:00 model.go:281: [D] seller:0,buyer:0
+2016/02/02 12:42:00 model.go:284: [E] sync.SyncUsr seller:uid or usr is not set 
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+34 total assertions[0m
+
+
+  syn 2016/02/02 12:42:00 model.go:281: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/02 12:42:01 sync.go:50: [D] SyncMUsr
+2016/02/02 12:42:01 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/02 12:42:01 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,112)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_SEX 男 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/02/02 12:42:01 sync.go:50: [D] SyncMUsr
+2016/02/02 12:42:01 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+2016/02/02 12:42:01 model.go:281: [D] seller:438982,buyer:0
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/02/02 12:42:01 sync.go:50: [D] SyncMUsr
+2016/02/02 12:42:01 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+2016/02/02 12:42:01 model.go:290: [E] sync.SyncUsr buyer:uid or usr is not set 
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+35 total assertions[0m
+
+--- PASS: TestSyn (1.44s)
+=== RUN TestCallback
+
+  Callback 2016/02/02 12:42:02 thdPayAbout.go:19: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016020212420037439])
+2016/02/02 12:42:02 thdPayAbout.go:28: [E] query aval err in ods_order_env
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+36 total assertions[0m
+
+
+  Callback 2016/02/02 12:42:02 thdPayAbout.go:19: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016020212420099640])
+DEM Query(select expand from ods_order where ono=?) args([2016020212420099640])
+strurl:http://rcp.dev.jxzy.com127.0.0.1id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/02/02 12:42:02 thdPayAbout.go:47: [E] callback:get err:Get http://rcp.dev.jxzy.com127.0.0.1id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: dial tcp: lookup rcp.dev.jxzy.com127.0.0.1id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: no such host
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+37 total assertions[0m
+
+
+  Callback 2016/02/02 12:42:02 thdPayAbout.go:19: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016020212420099640])
+DEM Query(select expand from ods_order where ono=?) args([2016020212420099640])
+strurl:http://rcp.dev.jxzy.com/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/02/02 12:42:02 thdPayAbout.go:60: [D] cb.Code:301,cb.Data:http://sso.dev.jxzy.com/sso/login.html?url=http%3A%2F%2Frcp.dev.jxzy.com%2F%2Fusr%2Fpurchase-course%3Fid%3D40021
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+38 total assertions[0m
+
+
+ 2016/02/02 12:42:02 thdPayAbout.go:19: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016020212420099640])
+DEM Query(select expand from ods_order where ono=?) args([2016020212420099640])
+2016/02/02 12:42:02 thdPayAbout.go:35: [E] query aval err in ods_order
+[32m✔[0m
+
+[31m[0m[33m[0m[32m
+39 total assertions[0m
+
+--- PASS: TestCallback (0.15s)
+=== RUN TestAfterSuccess
+
+  ... DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016020212420099640])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([PAID PAID 2016020212420099640 452638])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([INCOME PAID 2016020212420099640 267250])
+DEM Exec(update ods_order set status=? where ono =?) args([PAID 2016020212420099640])
+DEM Exec(update ods_order set wno=NULL where ono =?) args([2016020212420099640])
+2016/02/02 12:42:02 thdPayAbout.go:19: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016020212420099640])
+DEM Query(select expand from ods_order where ono=?) args([2016020212420099640])
+strurl:http://rcp.dev.jxzy.com/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/02/02 12:42:02 thdPayAbout.go:60: [D] cb.Code:301,cb.Data:http://sso.dev.jxzy.com/sso/login.html?url=http%3A%2F%2Frcp.dev.jxzy.com%2F%2Fusr%2Fpurchase-course%3Fid%3D40021
+2016/02/02 12:42:02 thdPayAbout.go:114: [D] callback=false
+2016/02/02 12:42:02 thdPayAbout.go:77: [D] 数据库出错，后续处理中
+[32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+41 total assertions[0m
+
+
+  update err 2016/02/02 12:42:02 thdPayAbout.go:117: [D] 回调出错，后续处理中
+DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016020212420099640])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([PAID PAID 2016020212420099640 452638])
+2016/02/02 12:42:02 model.go:256: [E] update ods_record buyer or seller error DEM query matched error
+[32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+43 total assertions[0m
+
+
+  update err DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016020212420099640])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([PAID PAID 2016020212420099640 452638])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([INCOME PAID 2016020212420099640 267250])
+DEM Exec(update ods_order set status=? where ono =?) args([PAID 2016020212420099640])
+2016/02/02 12:42:02 thdPayAbout.go:191: [E] Add ods_record error DEM query matched error
+[32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+45 total assertions[0m
+
+
+  update err DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016020212420099640])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([PAID PAID 2016020212420099640 452638])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([INCOME PAID 2016020212420099640 267250])
+DEM Exec(update ods_order set status=? where ono =?) args([PAID 2016020212420099640])
+DEM Exec(update ods_order set wno=NULL where ono =?) args([2016020212420099640])
+2016/02/02 12:42:02 thdPayAbout.go:200: [E] Add ods_record error DEM query matched error
+[32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+47 total assertions[0m
+
+
+  commit err DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016020212420099640])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([PAID PAID 2016020212420099640 452638])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([INCOME PAID 2016020212420099640 267250])
+DEM Exec(update ods_order set status=? where ono =?) args([PAID 2016020212420099640])
+DEM Exec(update ods_order set wno=NULL where ono =?) args([2016020212420099640])
+2016/02/02 12:42:02 thdPayAbout.go:208: [E] AlipayPaySuccess commit error DEM COMMIT_ERR
+[32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+49 total assertions[0m
+
+
+  ... DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016020212420037439])
+2016/02/02 12:42:02 thdPayAbout.go:160: [E] Query ods_record uid ,target_id error sql: no rows in result set
+err: Query record uid,target_id error
+2016/02/02 12:42:02 thdPayAbout.go:77: [D] 数据库出错，后续处理中
+2016/02/02 12:42:02 thdPayAbout.go:77: [D] 数据库出错，后续处理中
+[32m✔[0m[32m✔[0m
+
+[31m[0m[33m[0m[32m
+51 total assertions[0m
+
+2016/02/02 12:42:07 thdPayAbout.go:19: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016020212420099640])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016020212420099640])
+DEM Query(select expand from ods_order where ono=?) args([2016020212420099640])
+strurl:http://rcp.dev.jxzy.com/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([PAID PAID 2016020212420099640 452638])
+DEM Exec(update ods_record set type=?,status=? where ono=? and uid=?) args([INCOME PAID 2016020212420099640 267250])
+2016/02/02 12:42:07 thdPayAbout.go:60: [D] cb.Code:301,cb.Data:http://sso.dev.jxzy.com/sso/login.html?url=http%3A%2F%2Frcp.dev.jxzy.com%2F%2Fusr%2Fpurchase-course%3Fid%3D40021
+DEM Exec(update ods_order set status=? where ono =?) args([PAID 2016020212420099640])
+DEM Exec(update ods_order set wno=NULL where ono =?) args([2016020212420099640])
+2016/02/02 12:42:07 thdPayAbout.go:208: [E] AlipayPaySuccess commit error DEM COMMIT_ERR
+--- PASS: TestAfterSuccess (5.17s)
+=== RUN TestDealAliReturn
+2016/02/02 12:42:07 thdPayAbout.go:224: [D] buyer_email is :  
+2016/02/02 12:42:07 thdPayAbout.go:225: [D] subject is :  
+2016/02/02 12:42:07 thdPayAbout.go:226: [D] trade_status is : TRADE_SUCCESS 
+2016/02/02 12:42:07 thdPayAbout.go:227: [D] out_trade_no is :  
+2016/02/02 12:42:07 thdPayAbout.go:235: [D] trade_success in webreturn
+DEM Query(select 1) args([])
+DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016020212420037439])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016020212420037439])
+2016/02/02 12:42:07 thdPayAbout.go:160: [E] Query ods_record uid ,target_id error sql: no rows in result set
+2016/02/02 12:42:07 thdPayAbout.go:160: [E] Query ods_record uid ,target_id error sql: no rows in result set
+DEM Query(select 1) args([])
+DEM Query(select return_url from ods_order where ono=?) args([])
+2016/02/02 12:42:07 thdPayAbout.go:241: [E] can't find return_url in order
+2016/02/02 12:42:07 thdPayAbout.go:224: [D] buyer_email is :  
+2016/02/02 12:42:07 thdPayAbout.go:225: [D] subject is :  
+2016/02/02 12:42:07 thdPayAbout.go:226: [D] trade_status is : TRADE_SUCCESS 
+2016/02/02 12:42:07 thdPayAbout.go:227: [D] out_trade_no is : 2016020212420099640 
+2016/02/02 12:42:07 thdPayAbout.go:235: [D] trade_success in webreturn
+DEM Query(select 1) args([])
+DEM Query(select return_url from ods_order where ono=?) args([2016020212420099640])
+2016/02/02 12:42:07 thdPayAbout.go:224: [D] buyer_email is :  
+2016/02/02 12:42:07 thdPayAbout.go:225: [D] subject is :  
+2016/02/02 12:42:07 thdPayAbout.go:226: [D] trade_status is : TRADE_FINISHED 
+2016/02/02 12:42:07 thdPayAbout.go:227: [D] out_trade_no is : 2016020212420099640 
+--- PASS: TestDealAliReturn (0.03s)
+=== RUN TestDealAliNotify
+2016/02/02 12:42:07 thdPayAbout.go:285: [D] call from is: web
+2016/02/02 12:42:07 thdPayAbout.go:286: [D] trade_status is : TRADE_SUCCESS 
+2016/02/02 12:42:07 thdPayAbout.go:287: [D] out_trade_no is :  
+2016/02/02 12:42:07 thdPayAbout.go:288: [D] buyer_email is :  
+2016/02/02 12:42:07 thdPayAbout.go:289: [D] subject is :  
+2016/02/02 12:42:07 thdPayAbout.go:290: [D] total_fee is 0 
+2016/02/02 12:42:07 thdPayAbout.go:291: [D] buyerId is 
+2016/02/02 12:42:07 thdPayAbout.go:295: [D] TRADE_SUCCESS,处理订单中...
+DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([])
+2016/02/02 12:42:07 thdPayAbout.go:160: [E] Query ods_record uid ,target_id error sql: no rows in result set
+2016/02/02 12:42:07 thdPayAbout.go:77: [D] 数据库出错，后续处理中
+2016/02/02 12:42:07 thdPayAbout.go:285: [D] call from is: web
+2016/02/02 12:42:07 thdPayAbout.go:286: [D] trade_status is : TRADE_FINISHED 
+2016/02/02 12:42:07 thdPayAbout.go:287: [D] out_trade_no is :  
+2016/02/02 12:42:07 thdPayAbout.go:288: [D] buyer_email is :  
+2016/02/02 12:42:07 thdPayAbout.go:289: [D] subject is :  
+2016/02/02 12:42:07 thdPayAbout.go:290: [D] total_fee is 0 
+2016/02/02 12:42:07 thdPayAbout.go:291: [D] buyerId is 
+--- PASS: TestDealAliNotify (0.02s)
+PASS
+coverage: 90.4% of statements
+ok  	order/src/com.dy.order/orderModel	7.197s

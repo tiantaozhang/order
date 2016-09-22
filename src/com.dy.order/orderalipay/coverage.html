@@ -1,0 +1,1541 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">com.dy.order/orderalipay/alipay_config.go (81.8%)</option>
+				
+				<option value="file1">com.dy.order/orderalipay/alipay_mobile.go (87.3%)</option>
+				
+				<option value="file2">com.dy.order/orderalipay/alipay_web.go (90.7%)</option>
+				
+				<option value="file3">com.dy.order/orderalipay/perf.go (95.8%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" >package orderalipay
+
+import (
+        "com.dy.alipkg/alipay"
+        "com.dy.order/conf"
+        "fmt"
+)
+
+var private_key = `
+-----BEGIN RSA PRIVATE KEY-----
+MIICXQIBAAKBgQDZsfv1qscqYdy4vY+P4e3cAtmvppXQcRvrF1cB4drkv0haU24Y
+7m5qYtT52Kr539RdbKKdLAM6s20lWy7+5C0DgacdwYWd/7PeCELyEipZJL07Vro7
+Ate8Bfjya+wltGK9+XNUIHiumUKULW4KDx21+1NLAUeJ6PeW+DAkmJWF6QIDAQAB
+AoGBAJlNxenTQj6OfCl9FMR2jlMJjtMrtQT9InQEE7m3m7bLHeC+MCJOhmNVBjaM
+ZpthDORdxIZ6oCuOf6Z2+Dl35lntGFh5J7S34UP2BWzF1IyyQfySCNexGNHKT1G1
+XKQtHmtc2gWWthEg+S6ciIyw2IGrrP2Rke81vYHExPrexf0hAkEA9Izb0MiYsMCB
+/jemLJB0Lb3Y/B8xjGjQFFBQT7bmwBVjvZWZVpnMnXi9sWGdgUpxsCuAIROXjZ40
+IRZ2C9EouwJBAOPjPvV8Sgw4vaseOqlJvSq/C/pIFx6RVznDGlc8bRg7SgTPpjHG
+4G+M3mVgpCX1a/EU1mB+fhiJ2LAZ/pTtY6sCQGaW9NwIWu3DRIVGCSMm0mYh/3X9
+DAcwLSJoctiODQ1Fq9rreDE5QfpJnaJdJfsIJNtX1F+L3YceeBXtW0Ynz2MCQBI8
+9KP274Is5FkWkUFNKnuKUK4WKOuEXEO+LpR+vIhs7k6WQ8nGDd4/mujoJBr5mkrw
+DPwqA3N5TMNDQVGv8gMCQQCaKGJgWYgvo3/milFfImbp+m7/Y3vCptarldXrYQWO
+AQjxwc71ZGBFDITYvdgJM1MTqc8xQek1FXn1vfpy2c6O
+-----END RSA PRIVATE KEY-----
+`
+
+var public_key = `
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDZsfv1qscqYdy4vY+P4e3cAtmv
+ppXQcRvrF1cB4drkv0haU24Y7m5qYtT52Kr539RdbKKdLAM6s20lWy7+5C0Dgacd
+wYWd/7PeCELyEipZJL07Vro7Ate8Bfjya+wltGK9+XNUIHiumUKULW4KDx21+1NL
+AUeJ6PeW+DAkmJWF6QIDAQAB
+-----END PUBLIC KEY-----
+`
+
+var partner = "xxxxxxxxx"
+
+var key = "xxxxxxxxx"
+
+var seller = "xxxxxxxxx@gmail.com"
+
+func InitAlipayConfig() <span class="cov8" title="1">{
+
+        host := conf.Order_host()
+        //host := "14.23.162.170:12000"
+        //host := "192.168.10.118:8888"
+
+        // alipay.AWebConfig = &amp;alipay.AlipayConfig{
+        //         Partner: partner,
+        //         Key:     key,
+        //         //        Sign_type:           "MD5",
+        //         Sign_type: "RSA",
+        //         //        Private_key_path:    []byte(private_key),
+        //         //        Ali_public_key_path: []byte(public_key),
+        //         //Input_charset:       "utf-8",
+        //         Input_charset:  "GBK",
+        //         Cacert:         "Cacert",
+        //         Transport:      "http",
+        //         Service:        "create_direct_pay_by_user",
+        //         Seller_id:      seller,
+        //         Payment_type:   "1",
+        //         Show_order_url: "/paymentStatus.html",
+        // }
+
+        // alipay.AMobileConfig = &amp;alipay.AlipayConfig{
+        //         Partner:             partner,
+        //         Key:                 key,
+        //         Sign_type:           "RSA",
+        //         Private_key_path:    []byte(private_key),
+        //         Ali_public_key_path: []byte(public_key),
+        //         Input_charset:       "UTF-8",
+        //         Cacert:              "Cacert",
+        //         Transport:           "http",
+        //         Service:             "mobile.securitypay.pay",
+        //         Seller_id:           seller,
+        //         Payment_type:        "1",
+        // }
+
+        // alipay.AWapConfig = &amp;alipay.AlipayConfig{
+        //         Partner:             partner,
+        //         Key:                 key,
+        //         Sign_type:           "MD5",
+        //         Private_key_path:    []byte(private_key),
+        //         Ali_public_key_path: []byte(public_key),
+        //         Input_charset:       "utf-8",
+        //         Transport:           "http",
+        //         Service:             "alipay.wap.auth.authAndExecute",
+        //         Wap_Service:         "alipay.wap.trade.create.direct",
+        //         Seller_id:           seller,
+        //         Show_order_url:      "/paymentStatus.html",
+        // }
+
+        alipay.AMobileConfig.Notify_url = fmt.Sprintf("http://%v/alipay-mobile-notify", host)
+        alipay.AMobileConfig.Return_url = fmt.Sprintf("http://%v/alipay-mobile-return", host)
+        //alipay.AMobileConfig.Return_url = fmt.Sprintf("http://%v/alipay-mobile-return", "192.168.2.174")
+        err := alipay.Init(alipay.AMobileConfig)
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Println(err)
+                return
+        }</span>
+
+        // alipay.AWapConfig.Notify_url = fmt.Sprintf("http://%v/alipay-wap-notify", host)
+        // alipay.AWapConfig.Wap_merchant_url = fmt.Sprintf("http://%v/merchant", host)
+        // alipay.AWapConfig.Wap_callback_url = fmt.Sprintf("http://%v/alipay-wap-callback", host)
+        // alipay.AWapConfig.Show_order_url = fmt.Sprintf("http://%v/orderDetail", host)
+
+        // alipay.Init(alipay.AWapConfig)
+
+        <span class="cov8" title="1">alipay.AWebConfig.Notify_url = fmt.Sprintf("http://%v/alipay-web-notify", host)
+        alipay.AWebConfig.Return_url = fmt.Sprintf("http://%v/alipay-web-return", host)
+        alipay.AWebConfig.Show_order_url = fmt.Sprintf("http://%v/orderDetail", host)
+
+        alipay.Init(alipay.AWebConfig)</span>
+
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package orderalipay
+
+import (
+        "encoding/json"
+        "fmt"
+        //"github.com/ljy2010a/go_alipay"
+        "com.dy.alipkg/alipay"
+        "github.com/Centny/gwf/log"
+        "github.com/Centny/gwf/routing"
+        //"log"
+        "math/rand"
+        "net/http"
+        "strconv"
+        //"strings"
+        "com.dy.order/common"
+        "com.dy.order/orderModel"
+        "errors"
+        "time"
+)
+
+func NewOrderNo() string <span class="cov8" title="1">{
+        return fmt.Sprintf("%s%d", time.Now().Format("20060102150405"), RandInt(10000, 99999))
+}</span>
+
+func RandInt(min int, max int) int <span class="cov8" title="1">{
+        if max-min &lt;= 0 </span><span class="cov0" title="0">{
+                return min
+        }</span>
+        <span class="cov8" title="1">rand.Seed(time.Now().UTC().UnixNano())
+        return min + rand.Intn(max-min)</span>
+}
+
+//POST
+//支付宝回调处理
+func AlipayMobileNotify(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        log.D("-----AlipayMobileNotify Notify Begin------")
+
+        var callbackMsg = "fail"
+        defer func() </span><span class="cov8" title="1">{
+                log.D("alipay Notify End")
+                log.D("callbackMsg to alipayM : %v", callbackMsg)
+                w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+                fmt.Fprint(w, callbackMsg)
+        }</span>()
+
+        <span class="cov8" title="1">r.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+        r.PostForm = nil
+        r.ParseForm()
+
+        fmt.Println("==========================================================")
+        fmt.Println("Request :%v", r)
+        fmt.Println("==========================================================")
+
+        if err := alipay.VerifyMobileNotify(r, alipay.AMobileConfig); err != nil </span><span class="cov8" title="1">{
+                //验证失败
+                log.D("verify notify fail")
+                return
+        }</span>
+        <span class="cov0" title="0">orderModel.DealAliNotify(r, `ALIPAY`, "mobile")
+
+        callbackMsg = "success"
+        return</span>
+}
+
+//获取支付宝签名,整个字符串&amp;
+func GetRsaSign(hs *routing.HTTPSession) routing.HResult <span class="cov8" title="1">{
+
+        var (
+                orderNos string
+                //        orderNo  []string
+                err error
+        )
+
+        err = hs.ValidCheckVal(`
+                tradeNo,R|S,L:0;
+                `, &amp;orderNos)
+        if err != nil </span><span class="cov8" title="1">{
+                return hs.MsgResE(1, err.Error())
+        }</span>
+
+        <span class="cov8" title="1">fmt.Println("orderNos = ", orderNos)
+
+        //tradeNo := hs.R.FormValue("tradeNo")
+        sumstr := hs.R.FormValue("totalFee")
+        sum, err := strconv.ParseFloat(sumstr, 64)
+        if err != nil </span><span class="cov8" title="1">{
+                return hs.MsgResE(1, err.Error())
+        }</span>
+        <span class="cov8" title="1">if sum &lt;= 0 </span><span class="cov8" title="1">{
+                return hs.MsgResE(1, fmt.Sprintf("%s", "totalFee &lt; 0"))
+        }</span>
+
+        <span class="cov8" title="1">amr := alipay.AlipayMobileRequest{}
+        amr.OutTradeNo = NewOrderNo()
+        amr.Subject = "掌上学园商品"
+        amr.Body = "掌上学园商品"
+        amr.TotalFee = sum
+
+        fmt.Println(amr)
+        //fmt.Printf("alipay.AMobileConfig:%s\n", alipay.AMobileConfig)
+        orderinfo := alipay.AlipayMobileRsaSign(amr, alipay.AMobileConfig)
+
+        fmt.Println("orderinfo", orderinfo)
+        //fmt.Println(hs.MsgRes(orderinfo))
+        return hs.MsgRes(orderinfo)</span>
+        //return routing.HRES_RETURN
+}
+
+//获取支付宝签名,整个字符串&amp;
+func GetRsaSignJson(req string) (string, error) <span class="cov8" title="1">{
+
+        var err error
+
+        log.D("begin GetRsaSignJson remote request")
+        fmt.Printf("req:%s\n", []byte(req))
+        var js AlipayRemoteReqStruct
+        err = json.Unmarshal([]byte(req), &amp;js)
+        if err != nil </span><span class="cov8" title="1">{
+                log.E("format err")
+                return "", err
+        }</span>
+        <span class="cov8" title="1">fmt.Printf("js:%s\n", js)
+
+        if err := orderModel.CheckParas(orderModel.CommonRemoteReqStruct(js)); err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+
+        //detect integral
+        <span class="cov8" title="1">if err = orderModel.DetectIntegral(common.DbConn(), js.Integral, js.Buyer, js.TotalFee); err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">ono := NewOrderNo()
+        //deal req data
+        if _, err := DealReqData(&amp;js, ono); err != nil </span><span class="cov8" title="1">{
+                log.E("DealReqData err:", err)
+                return "", err
+        }</span>
+        //全积分暂不支持
+        //
+        <span class="cov8" title="1">orderinfo := ""
+        if js.TotalFee &gt; 0 </span><span class="cov8" title="1">{
+                amr := alipay.AlipayMobileRequest{}
+                amr.OutTradeNo = ono
+                amr.Subject = js.Subject // 商品名称
+                amr.Body = js.Body
+                amr.TotalFee = js.TotalFee // 价格
+
+                orderinfo = alipay.AlipayMobileRsaSign(amr, alipay.AMobileConfig)
+
+                fmt.Println("orderinfo:", orderinfo)
+        }</span><span class="cov0" title="0"> else {
+                orderinfo = "success"
+        }</span>
+        <span class="cov8" title="1">orderInfoJson := map[string]interface{}{}
+        orderInfoJson["code"] = "0"
+        orderInfoJson["data"] = orderinfo
+        returnJs, err := json.Marshal(orderInfoJson)
+        if err != nil </span><span class="cov0" title="0">{
+                log.E("json:", err.Error())
+                return "", err
+        }</span>
+        <span class="cov8" title="1">return string(returnJs), nil</span>
+}
+
+func DealReqData(js *AlipayRemoteReqStruct, ono string) (string, error) <span class="cov8" title="1">{
+
+        //sync uap
+        if err := orderModel.SynUser(js.Seller, js.Buyer); err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">db := common.DbConn()
+        tx, err := db.Begin()
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Printf("start a transaction err,%s\n", err.Error())
+                return "", err
+        }</span>
+        //isOnoExist, isExistErr := CheckIsExist(db, js.Ono, 0, "ods_order")
+        <span class="cov8" title="1">isOnoExist, _ := orderModel.CheckIsExist(db, js.Ono, 0, "ods_order")
+        //integral 假定1=＝1分
+
+        _, _needpay, _payway := orderModel.PayTypeAndNeedPay(js.Integral, js.TotalFee)
+
+        //======以后会有refund 请勿删除=====
+        //OrderType := js.Type
+        // if OrderType == "REFUND" {
+        //         log.D("Type Refund")
+        //         if js.Ono == "" {
+        //                 log.E("Ono is nil")
+        //                 tx.Rollback()
+        //                 return "", errors.New("Ono is nil")
+        //         }
+        //         if isOnoExist != true {
+        //                 log.E("Ono is not exist in db")
+        //                 tx.Rollback()
+        //                 return "", errors.New("ono is not exist:" + isExistErr.Error())
+        //         }
+        //         for i := 0; i &lt; len(js.OrderItem); i++ {
+        //                 if bl, _ := CheckIsExist(db, js.Ono, js.OrderItem[i].P_id, "ods_order_item"); bl != true {
+        //                         log.E("ono or oid is not exist in order_item")
+        //                         tx.Rollback()
+        //                         return "", errors.New("ono or oid is not exist in order_item")
+        //                 }
+        //         }
+        //         //更改order_item
+        //         for i := 0; i &lt; len(js.OrderItem); i++ {
+        //                 _sql := `update ods_order_item set type ='REFUNG' where ono=? and p_id=?`
+        //                 _, err = tx.Exec(_sql, js.OrderItem[i].Ono, js.OrderItem[i].P_id)
+        //                 if err != nil {
+        //                         log.E("exec order_item refund err")
+        //                         tx.Rollback()
+        //                         return "", err
+        //                 }
+        //         }
+
+        //         //insert refund
+        //         for i := 0; i &lt; len(js.OrderRefund); i++ {
+        //                 _sql := `insert into ods_order_refund(ono,item,content,imgs,status) value(?,?,?,?,?)`
+        //                 _, err = tx.Exec(_sql, js.OrderRefund[i].Ono, js.OrderRefund[i].Item, js.OrderRefund[i].Imgs, js.OrderRefund[i].Status)
+        //                 if err != nil {
+        //                         log.E("Add OrderItem error %v", err.Error())
+        //                         tx.Rollback()
+        //                         return "", err
+        //                 }
+        //         }
+        //         //record
+        //         //uid--&gt;buyer  target_id--&gt;seller
+        //         if bl, err := InsertRecord(tx, js.Subject, "REFUND", js.TotalFee, js.Buyer, "ALIPAY", js.Seller, "USER", ono, "NOT_PAY"); bl != true {
+        //                 return "", err
+        //         }
+        //         //uid--&gt;seller  target_id--&gt;buyer
+        //         if bl, err := InsertRecord(tx, js.Subject, "REFUND", js.TotalFee, js.Seller, "ALIPAY", js.Buyer, "USER", ono, "NOT_PAY"); bl != true {
+        //                 return "", err
+        //         }
+
+        // } else {
+        log.D("Type N")
+        if js.TotalFee &lt; 0 || (js.TotalFee == 0 &amp;&amp; js.Integral == 0) </span><span class="cov8" title="1">{
+                log.E("消费金额&lt;=0:%v", js.TotalFee)
+                return "", errors.New("TotalFee error")
+        }</span>
+        //同一订单
+        <span class="cov8" title="1">if !isOnoExist </span><span class="cov8" title="1">{
+                //insert item
+                log.D("length orderItem:%d", len(js.OrderItem))
+                log.D("%v", js.OrderItem)
+                if len(js.OrderItem) &lt; 1 </span><span class="cov8" title="1">{
+                        log.E("OrderItem is nil")
+                        tx.Rollback()
+                        return "", errors.New("OrderItem is nil")
+                }</span>
+                //detect paid_cb
+                <span class="cov8" title="1">if err := CheckPaidcb(js.OrderItem[0].P_from); err != nil </span><span class="cov0" title="0">{
+                        log.E("p_from err")
+                        tx.Rollback()
+                        return "", errors.New("p_from err")
+                }</span>
+
+                <span class="cov8" title="1">if err := orderModel.InsertOrderItem(tx, orderModel.CommonRemoteReqStruct(*js), ono); err != nil </span><span class="cov8" title="1">{
+                        log.E("InsertOrderItem err:%v", err.Error())
+                        return "", err
+                }</span>
+                //_payway 0:正常支付 1:有积分有💰 2:全积分
+                <span class="cov8" title="1">if 2 == _payway || 1 == _payway </span><span class="cov8" title="1">{
+                        // //uid--&gt;buyer  target_id--&gt;seller
+                        if err := orderModel.InsertWithIntegral(tx, orderModel.CommonRemoteReqStruct(*js), ono); err != nil </span><span class="cov8" title="1">{
+                                log.E("InsertWithIntegral: %v", err.Error())
+                                return "", err
+                        }</span>
+                }
+                <span class="cov8" title="1">if 0 == _payway || 1 == _payway </span><span class="cov8" title="1">{
+                        //record
+                        //uid--&gt;buyer  target_id--&gt;seller
+                        // if bl, err := InsertRecord(tx, js.Subject, "INCOME", _needpay, js.Buyer, "ALIPAY", js.Seller, "USER", ono, "NOT_PAY"); bl != true {
+                        //         return "", err
+                        // }
+                        // //uid--&gt;seller  target_id--&gt;buyer
+                        // if bl, err := InsertRecord(tx, js.Subject, "PAY", _needpay, js.Seller, "ALIPAY", js.Buyer, "USER", ono, "NOT_PAY"); bl != true {
+                        //         return "", err
+                        // }
+                        if err := orderModel.InsertWithRMB(tx, orderModel.CommonRemoteReqStruct(*js), ono, _needpay); err != nil </span><span class="cov8" title="1">{
+                                log.E("InsertWithRMB: %v", err.Error())
+                                return "", err
+                        }</span>
+                }
+        }
+        // }
+        //insert order
+        //        status := "NOT_PAY"
+        <span class="cov8" title="1">if !isOnoExist </span><span class="cov8" title="1">{
+                // _sql := `insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)`
+                // _, err = tx.Exec(_sql, ono, js.Buyer, js.Seller, js.TotalFee, js.Type, js.Status, js.Return_url, js.Expand)
+                // if err != nil {
+                //         log.E("Add Order error %v", err.Error())
+                //         tx.Rollback()
+                //         return "", err
+                // }
+                if err := orderModel.InsertOdsOrder(tx, orderModel.CommonRemoteReqStruct(*js), ono); err != nil </span><span class="cov8" title="1">{
+                        log.E("InsertOdsOrder: %v", err.Error())
+                        return "", err
+                }</span>
+        }
+        <span class="cov8" title="1">err = tx.Commit()
+        if err != nil </span><span class="cov0" title="0">{
+                log.E("AddOrder commit error %v", err.Error())
+                tx.Rollback()
+                return "", err
+        }</span>
+        <span class="cov8" title="1">return "", nil</span>
+}
+
+func MobilePayTest(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        m := AlipayRemoteReqStruct{
+                Ono:        "",
+                Buyer:      267250,
+                Seller:     438982,
+                Subject:    "功夫熊猫3",
+                TotalFee:   0.01,
+                Body:       "指纹打卡",
+                Type:       "N",
+                Status:     "NOT_PAY",
+                Return_url: "http://rcp.dev.jxzy.com/questionPoolDetailNew.html?id=40781&amp;eid=55651",
+                Expand:     "id=40781&amp;token=2b8294d19c4a0c9729b685abbd1e3341-9767721f-75bc-47f2-b46a-f1377bae47f4",
+        }
+        orderi := orderModel.Item{
+                Ono:      "",
+                Oid:      int64(10000),
+                P_name:   "balabalabala",
+                P_id:     int64(11111),
+                P_type:   "",
+                P_count:  1,
+                P_from:   "TEST",
+                Notified: 0,
+                Price:    0.01,
+                Type:     "N",
+                Status:   "N",
+        }
+        m.OrderItem = append(m.OrderItem, orderi)
+        bytes, _ := json.Marshal(m)
+        var str string
+        var err error
+        if str, err = GetRsaSignJson(string(bytes)); err != nil </span><span class="cov0" title="0">{
+                fmt.Println(err)
+                return
+        }</span>
+        <span class="cov8" title="1">fmt.Fprint(w, str)</span>
+
+}
+
+/*
+_input_charset="UTF-8"
+&amp;body="掌上学园商品"
+&amp;notify_url="http%3A%2F%2Fmall.kuxiao.cn%2FalipayMobile%2Fnotify"
+&amp;out_trade_no="2015122215125373432"
+&amp;partner="2088501949844011"
+&amp;payment_type="1"
+&amp;seller_id="itdayang@gmail.com"
+&amp;service="mobile.securitypay.pay"
+&amp;subject="掌上学园商品"
+&amp;total_fee="0.01"
+&amp;sign="EDH9zspz8IyKAoJPKoHePpTzooYp5IXEFAmBIrnW3D50ESj3gsXoPZ%2FxWN4Qmcwav0m69F7whckY23hiWoLUirC%2BEBM9JHfYCqUUsQvDd6GNcsul9y31cBB9bAbs%2FJkBqJWSdG%2FEEBfwHBgflvNZKStBoqwqE6CDWDojyi8RLhg%3D"
+&amp;sign_type="RSA"",
+*/
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package orderalipay
+
+import (
+        "com.dy.alipkg/alipay"
+        "com.dy.order/common"
+        "com.dy.wxpkg/wechatPay"
+        "encoding/json"
+        "errors"
+        "fmt"
+        "github.com/Centny/gwf/log"
+        "github.com/Centny/gwf/routing"
+        "github.com/Centny/gwf/util"
+        //"log"
+        //"com.dy.tool/dbMgr"
+        "database/sql"
+        "net/http"
+        //"net/url"
+        // "com.dy.order/conf"
+        "com.dy.order/orderModel"
+        // "io/ioutil"
+        //"org.cny.uap/sync"
+        "com.dy.order/orderQr"
+        "strconv"
+        "strings"
+        // "time"
+)
+
+// func NowTime() string {
+//         return fmt.Sprintf("%s", time.Now().Format("20060102150405"))
+// }
+
+/**
+请求支付
+*/
+var c_ono string
+
+//A:ali N:native M:mobile W:WX
+var way = []string{"AN", "AM", "WM", "WN"}
+
+// 远程调用不用该接口
+// func AlipayWebRequest(w http.ResponseWriter, r *http.Request) {
+
+//         alipayR := &amp;alipay.AlipayWebRequest{
+//                 OutTradeNo: NewOrderNo(), // 订单号
+//                 Subject:    `迟到扣200`,     // 商品名称
+//                 TotalFee:   0.01,         // 价格
+//                 Body:       "test web Chinese",
+//         }
+
+//         // 输出的是 html 页面，会自动跳转到支付界面
+//         err := alipay.AlipayWebRequestForm(alipay.AWebConfig, alipayR, w)
+//         if err != nil {
+//                 return
+//         }
+//         return
+// }
+
+/*
+remote call
+参数:AlipayRemoteReqStruct json
+返回：string
+*/
+func AlipayRemoteRequest(req string) (htm string, err error) <span class="cov8" title="1">{
+        // js := AlipayRemoteReqStruct{}
+        log.D("begin remote request")
+        fmt.Printf("req:%s\n", []byte(req))
+        var js AlipayRemoteReqStruct
+        err = json.Unmarshal([]byte(req), &amp;js)
+        if err != nil </span><span class="cov8" title="1">{
+                log.E("format err")
+                return "", err
+        }</span>
+        //log.D("json format right")
+        <span class="cov8" title="1">if err := orderModel.CheckParas(orderModel.CommonRemoteReqStruct(js)); err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">fmt.Println(js)
+        ono := NewOrderNo()
+        SetCurrentOne(ono)
+
+        //sync uap
+        if err := orderModel.SynUser(js.Seller, js.Buyer); err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">db := common.DbConn()
+
+        isOnoExist, err := CheckIsOnoExist(db, js.Ono, "ods_order")
+        //ono is nil 为正常情况
+        if err != nil </span><span class="cov8" title="1">{
+                if err.Error() == "ono is nil" </span><span class="cov8" title="1">{
+
+                }</span><span class="cov0" title="0"> else {
+                        log.E("%s", err.Error())
+                        return "", err
+                }</span>
+        }
+        //检测积分
+        <span class="cov8" title="1">if err = orderModel.DetectIntegral(db, js.Integral, js.Buyer, js.TotalFee); err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+
+        //integral 假定1=＝1分
+        <span class="cov8" title="1">_, _needpay, _payway := orderModel.PayTypeAndNeedPay(js.Integral, js.TotalFee)
+
+        log.D("integral:%f,%f", js.TotalFee, float64(js.Integral)/100.0)
+
+        tx, err := db.Begin()
+        if err != nil </span><span class="cov0" title="0">{
+                fmt.Printf("start a transaction err,%s\n", err.Error())
+                return "", errors.New("start a transaction err")
+        }</span>
+
+        //OrderType := js.Type
+        //if OrderType == "REFUND" {
+        // ----------暂时用不到,以后有refund 请勿删除-----------
+        // log.D("Type Refund")
+        // if js.Ono == "" {
+        //         log.E("Ono is nil")
+        //         tx.Rollback()
+        //         return "", errors.New("Ono is nil")
+        // }
+        // if bl, err := CheckIsExist(db, js.Ono, 0, "ods_order"); bl != true {
+        //         log.E("Ono is not exist in db")
+        //         tx.Rollback()
+        //         return "", errors.New("ono is not exist:" + err.Error())
+        // }
+        // for i := 0; i &lt; len(js.OrderItem); i++ {
+        //         if bl, _ := CheckIsExist(db, js.Ono, js.OrderItem[i].P_id, "ods_order_item"); bl != true {
+        //                 log.E("ono or oid is not exist in order_item")
+        //                 tx.Rollback()
+        //                 return "", errors.New("ono or oid is not exist in order_item")
+        //         }
+        // }
+        // //更改order_item
+        // for i := 0; i &lt; len(js.OrderItem); i++ {
+        //         _sql := `update ods_order_item set type ='REFUNG' where ono=? and p_id=?`
+        //         _, err = tx.Exec(_sql, js.OrderItem[i].Ono, js.OrderItem[i].P_id)
+        //         if err != nil {
+        //                 log.E("exec order_item refund err")
+        //                 tx.Rollback()
+        //                 return "", err
+        //         }
+        // }
+
+        // //insert refund
+        // for i := 0; i &lt; len(js.OrderRefund); i++ {
+        //         _sql := `insert into ods_order_refund(ono,item,content,imgs,status) value(?,?,?,?,?)`
+        //         _, err = tx.Exec(_sql, js.OrderRefund[i].Ono, js.OrderRefund[i].Item, js.OrderRefund[i].Imgs, js.OrderRefund[i].Status)
+        //         if err != nil {
+        //                 log.E("Add OrderItem error %v", err.Error())
+        //                 tx.Rollback()
+        //                 return "", err
+        //         }
+        // }
+        // //record
+        // //uid--&gt;buyer  target_id--&gt;seller
+        // if bl, err := InsertRecord(tx, js.Subject, "REFUND", js.TotalFee, js.Buyer, "ALIPAY", js.Seller, "USER", ono, "NOT_PAY"); bl != true {
+        //         return "", err
+        // }
+        // //uid--&gt;seller  target_id--&gt;buyer
+        // if bl, err := InsertRecord(tx, js.Subject, "REFUND", js.TotalFee, js.Seller, "ALIPAY", js.Buyer, "USER", ono, "NOT_PAY"); bl != true {
+        //         return "", err
+        // }
+        //} else {
+        <span class="cov8" title="1">log.D("Type N")
+        if js.TotalFee &lt; 0 || (js.TotalFee == 0 &amp;&amp; js.Integral == 0) </span><span class="cov8" title="1">{
+                log.E("消费金额或积分有误:%v", js.TotalFee)
+                tx.Rollback()
+                return "", errors.New("TotalFee error")
+        }</span>
+
+        //同一订单
+        <span class="cov8" title="1">if isOnoExist == false </span><span class="cov8" title="1">{
+                //insert item
+                log.D("length orderItem:%d", len(js.OrderItem))
+                log.D("%v", js.OrderItem)
+                if len(js.OrderItem) &lt; 1 </span><span class="cov8" title="1">{
+                        log.E("OrderItem is nil")
+                        tx.Rollback()
+                        return "", errors.New("OrderItem is nil")
+                }</span>
+                //detect paid_cb
+                <span class="cov8" title="1">if err := CheckPaidcb(js.OrderItem[0].P_from); err != nil </span><span class="cov8" title="1">{
+                        log.E("p_from err:%s", js.OrderItem[0].P_from)
+                        tx.Rollback()
+                        return "", errors.New("p_from err，系统暂不支持")
+                }</span>
+
+                <span class="cov8" title="1">if err := orderModel.InsertOrderItem(tx, orderModel.CommonRemoteReqStruct(js), ono); err != nil </span><span class="cov8" title="1">{
+                        log.E("InsertOrderItem err:%v", err.Error())
+                        return "", err
+                }</span>
+
+                //_payway 0:正常支付 1:有积分有💰 2:全积分
+                <span class="cov8" title="1">if 2 == _payway || 1 == _payway </span><span class="cov8" title="1">{
+                        // //uid--&gt;buyer  target_id--&gt;seller
+                        // if bl, err := InsertRecord(tx, js.Subject, "INCOME", float64(js.Integral), js.Buyer, "大洋币", js.Seller, "USER", ono, "NOT_PAY"); bl != true {
+                        //         log.E("insertRecord: %v", err.Error())
+                        //         return "", err
+                        // }
+                        // //uid--&gt;seller  target_id--&gt;buyer
+                        // if bl, err := InsertRecord(tx, js.Subject, "PAY", float64(js.Integral), js.Seller, "大洋币", js.Buyer, "USER", ono, "NOT_PAY"); bl != true {
+                        //         log.E("insertRecord: %v", err.Error())
+                        //         return "", err
+                        // }
+                        // //deduct
+                        // _n_integral := ^js.Integral + 1
+                        // if bl, err := UpdateIntegral(tx, _n_integral, js.Buyer); bl != true {
+                        //         log.E("UpdateIntegral: %v", err.Error())
+                        //         return "", err
+                        // }
+                        if err := orderModel.InsertWithIntegral(tx, orderModel.CommonRemoteReqStruct(js), ono); err != nil </span><span class="cov8" title="1">{
+                                log.E("InsertWithIntegral: %v", err.Error())
+                                return "", err
+                        }</span>
+
+                }
+                <span class="cov8" title="1">if 0 == _payway || 1 == _payway </span><span class="cov8" title="1">{
+                        // //record
+                        if err := orderModel.InsertWithRMB(tx, orderModel.CommonRemoteReqStruct(js), ono, _needpay); err != nil </span><span class="cov8" title="1">{
+                                log.E("InsertWithRMB: %v", err.Error())
+                                return "", err
+                        }</span>
+                }
+        }
+
+        //}
+
+        //insert order
+        //        status := "NOT_PAY"
+        <span class="cov8" title="1">if isOnoExist == false </span><span class="cov8" title="1">{
+                // _sql := `insert into ods_order(ono,buyer,seller,total_price,type,status,return_url,expand) value(?,?,?,?,?,?,?,?)`
+                // _, err = tx.Exec(_sql, ono, js.Buyer, js.Seller, js.TotalFee, js.Type, js.Status, js.Return_url, js.Expand)
+                // if err != nil {
+                //         log.E("Add Order error %v", err.Error())
+                //         tx.Rollback()
+                //         return "", err
+                // }
+                if err := orderModel.InsertOdsOrder(tx, orderModel.CommonRemoteReqStruct(js), ono); err != nil </span><span class="cov8" title="1">{
+                        log.E("InsertOdsOrder: %v", err.Error())
+                        return "", err
+                }</span>
+        }
+        <span class="cov8" title="1">err = tx.Commit()
+        if err != nil </span><span class="cov0" title="0">{
+                log.E("AddOrder commit error %v", err.Error())
+                tx.Rollback()
+                return "", err
+        }</span>
+
+        <span class="cov8" title="1">if _payway == 2 </span><span class="cov0" title="0">{
+                //total integral, update data
+
+                return "integral total", nil
+        }</span>
+
+        <span class="cov8" title="1">alipayR := &amp;alipay.AlipayWebRequest{
+                OutTradeNo: ono,         // 订单号
+                Subject:    js.Subject,  // 商品名称
+                TotalFee:   js.TotalFee, // 价格
+                Body:       js.Body,
+        }
+        // 输出的是 html 页面，会自动跳转到支付界面
+        htm, err = alipay.AlipayRemoteRequestForm(alipay.AWebConfig, alipayR)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+        <span class="cov8" title="1">return htm, nil</span>
+}
+
+//confirm pay
+func ConfirmOrderPay(ono, payType, token string) (string, error) <span class="cov8" title="1">{
+        log.D("=============begin corfirmPay===============")
+        if ono == "" || payType == "" </span><span class="cov8" title="1">{
+                log.E("ono or payType is nil")
+                return "", errors.New("ono or payType is nil")
+        }</span>
+        <span class="cov8" title="1">isIn := false //in way
+
+        for _, v := range way </span><span class="cov8" title="1">{
+                if payType == v </span><span class="cov8" title="1">{
+                        isIn = true
+                        log.D("payType match")
+                        break</span>
+                }
+        }
+        <span class="cov8" title="1">if isIn != true </span><span class="cov8" title="1">{
+                log.E(payType + " is not support")
+                return "", errors.New(payType + " is not support")
+        }</span>
+        <span class="cov8" title="1">db := common.DbConn()
+        //以后会增加状态，暂时用不到
+        isOnoExist, err := CheckIsOnoExist(db, ono, "ods_order")
+        if isOnoExist != true || err != nil </span><span class="cov8" title="1">{
+                log.E("ono is not exist")
+                return "", errors.New("ono is not exist")
+        }</span>
+        //
+        // if isOnoExist != true {
+        //         log.E("ono is not exist")
+        //         return "", errors.New("ono is not exist")
+        // }
+        <span class="cov8" title="1">status, err := CheckIsPay(db, ono, "ods_order")
+        if err != nil </span><span class="cov8" title="1">{
+                log.E(err.Error())
+                return "", err
+        }</span>
+        <span class="cov8" title="1">if status == "PAID" || status == "paid" </span><span class="cov8" title="1">{
+                log.D("%v has paid", ono)
+                return "", errors.New(ono + " has paid")
+        }</span>
+        <span class="cov8" title="1">if token != "" </span><span class="cov8" title="1">{
+
+                oldExpand, err := getExpandByOno(db, ono)
+
+                if err != nil </span><span class="cov8" title="1">{
+                        log.E("%s", err.Error())
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">s_expand := strings.Split(oldExpand, "&amp;")
+                for i := 0; i &lt; len(s_expand); i++ </span><span class="cov8" title="1">{
+                        ss := strings.Split(s_expand[i], "=")
+                        if "token" == ss[0] || "TOKEN" == ss[0] </span><span class="cov8" title="1">{
+                                s_expand[i] = ss[0] + "=" + token
+                                break</span>
+                        }
+                }
+                <span class="cov8" title="1">expand := strings.Join(s_expand, "&amp;")
+                log.D("expand:%v", expand)
+                if bl, err := updateExpand(db, ono, expand); bl != true </span><span class="cov8" title="1">{
+                        log.E("updateExpand err: ", err.Error())
+                        return "", err
+                }</span>
+        }
+
+        <span class="cov8" title="1">switch payType </span>{
+        <span class="cov8" title="1">case way[0]:
+                fallthrough</span>
+        <span class="cov8" title="1">case way[1]:
+                r, err := getDataAli(db, ono)
+                if err != nil </span><span class="cov8" title="1">{
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">return confirmAliPay(payType, r)</span>
+        <span class="cov8" title="1">case way[2]:
+                u, err := getDataWX(db, ono, payType)
+                if err != nil </span><span class="cov8" title="1">{
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">return confirmWXPay(payType, u, ono)</span>
+        <span class="cov8" title="1">case way[3]:
+                //WN
+                u, err := getDataWX(db, ono, payType)
+                if err != nil </span><span class="cov0" title="0">{
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">return confirmWXPay(payType, u, ono)</span>
+        <span class="cov0" title="0">default:
+                return "", errors.New(payType + " is not support")</span>
+        }
+
+}
+
+func confirmAliPay(payType string, r *alipay.AlipayWebRequest) (string, error) <span class="cov8" title="1">{
+        if payType == way[0] </span><span class="cov8" title="1">{
+                htm, err := alipay.AlipayRemoteRequestForm(alipay.AWebConfig, r)
+                if err != nil </span><span class="cov0" title="0">{
+                        log.E(err.Error())
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">return htm, nil</span>
+        }<span class="cov8" title="1"> else if payType == way[1] </span><span class="cov8" title="1">{
+                orderinfo := alipay.AlipayMobileRsaSign(alipay.AlipayMobileRequest(*r), alipay.AMobileConfig)
+
+                fmt.Println("orderinfo", orderinfo)
+
+                orderInfoJson := map[string]interface{}{}
+                orderInfoJson["code"] = "0"
+                orderInfoJson["data"] = orderinfo
+                returnJs, err := json.Marshal(orderInfoJson)
+                if err != nil </span><span class="cov0" title="0">{
+                        log.E("json: ", err.Error())
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">return string(returnJs), nil</span>
+        }
+        <span class="cov0" title="0">return "", errors.New("payType is not marry")</span>
+}
+
+func confirmWXPay(payType string, u *wechatPay.Unifiedorder, ono string) (string, error) <span class="cov8" title="1">{
+
+        // uresp, err := u.TakeOrder(wechatPay.GWxPayConfig)
+        // if err != nil {
+        //         log.E("TakeOrder err:", err.Error())
+        //         return "", err
+        // }
+
+        if payType == way[2] </span><span class="cov8" title="1">{
+                //app
+                uresp, err := u.TakeOrder(wechatPay.GWxPayConfig)
+                if err != nil </span><span class="cov8" title="1">{
+                        log.E("TakeOrder err:", err.Error())
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">returnJs, err := u.GenPayReq(wechatPay.GWxPayConfig, uresp.Prepay_id, ono)
+                if err != nil </span><span class="cov0" title="0">{
+                        log.E("GenPayReq err:", err.Error())
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">return string(returnJs), nil</span>
+        }<span class="cov8" title="1"> else {
+                //native
+                uresp, err := u.TakeOrder(wechatPay.GWxNativePayConfig)
+                if err != nil </span><span class="cov8" title="1">{
+                        log.E("TakeOrder err:", err.Error())
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">data, err := orderQr.GenQr(uresp.Code_url, ono)
+                if err != nil </span><span class="cov0" title="0">{
+                        log.E("genQr err:%s", err.Error())
+                        return "", err
+                }</span>
+                <span class="cov8" title="1">return data, nil</span>
+        }
+
+}
+
+func getDataAli(db *sql.DB, ono string) (*alipay.AlipayWebRequest, error) <span class="cov8" title="1">{
+
+        var totalFee float64
+        var subject string
+        _sql := `select total_price from ods_order where ono=?`
+        if err := db.QueryRow(_sql, ono).Scan(&amp;totalFee); err != nil </span><span class="cov8" title="1">{
+                log.E("query total_price err in ods_order:%v", err.Error())
+                return &amp;alipay.AlipayWebRequest{}, err
+        }</span>
+        <span class="cov8" title="1">_sql = `select name from ods_record where ono=?`
+        if err := db.QueryRow(_sql, ono).Scan(&amp;subject); err != nil </span><span class="cov8" title="1">{
+                log.E("query name err in ods_record:%v", err.Error())
+                return &amp;alipay.AlipayWebRequest{}, err
+        }</span>
+
+        <span class="cov8" title="1">r := &amp;alipay.AlipayWebRequest{
+                OutTradeNo: ono,      // 订单号
+                Subject:    subject,  // 商品名称
+                TotalFee:   totalFee, // 价格
+        }
+        return r, nil</span>
+}
+
+func getDataWX(db *sql.DB, ono string, payType string) (*wechatPay.Unifiedorder, error) <span class="cov8" title="1">{
+
+        var totalFee float64
+        var subject string
+        _sql := `select total_price from ods_order where ono=?`
+        if err := db.QueryRow(_sql, ono).Scan(&amp;totalFee); err != nil </span><span class="cov8" title="1">{
+                log.E("query total_price err in ods_order:%v", err.Error())
+                return &amp;wechatPay.Unifiedorder{}, err
+        }</span>
+        <span class="cov8" title="1">_sql = `select name from ods_record where ono=?`
+        if err := db.QueryRow(_sql, ono).Scan(&amp;subject); err != nil </span><span class="cov8" title="1">{
+                log.E("query name err in ods_record:%v", err.Error())
+                return &amp;wechatPay.Unifiedorder{}, err
+        }</span>
+        <span class="cov8" title="1">s := fmt.Sprintf("%.2f", totalFee)
+        i, err := strconv.ParseFloat(s, 64)
+        if err != nil </span><span class="cov0" title="0">{
+                return &amp;wechatPay.Unifiedorder{}, errors.New("TotalFee err")
+        }</span>
+
+        //
+        <span class="cov8" title="1">if payType == way[2] </span><span class="cov8" title="1">{
+                u := wechatPay.NewUnifiedorder(wechatPay.GWxPayConfig)
+                u.Nonce_str = wechatPay.Md5String(wechatPay.NewOrderNo())
+                u.Body = subject
+                u.Out_trade_no = ono
+                //fmt.Println("TotalFee:", totalFee*100)
+                u.Total_fee = fmt.Sprintf("%d", int(i*100))
+                u.Spbill_create_ip = "127.0.0.1"
+                // 交易类型  JSAPI--公众号支付、NATIVE--原生扫码支付、APP--app支付  MICROPAY--刷卡支付
+                u.Trade_type = "APP"
+                // uresp, err := u.TakeOrder(wechatPay.GWxPayConfig)
+                // if err != nil {
+                //         log.E("TakeOrder err:", err.Error())
+                //         return "", err
+                // }
+                //fmt.Println("u.TotalFee:", u.Total_fee)
+
+                return u, nil
+        }</span><span class="cov8" title="1"> else {
+                u := wechatPay.NewUnifiedorder(wechatPay.GWxNativePayConfig)
+                // 随机字符串
+                u.Nonce_str = wechatPay.Md5String(wechatPay.NewOrderNo())
+                // 商品描述
+                u.Body = subject
+                // 商户订单号
+                u.Out_trade_no = ono
+                // // 总金额
+                u.Total_fee = fmt.Sprintf("%d", int(i*100))
+                // // 终端IP
+                u.Spbill_create_ip = "127.0.0.1"
+                // // 交易类型  JSAPI--公众号支付、NATIVE--原生扫码支付、APP--app支付  MICROPAY--刷卡支付
+                u.Trade_type = "NATIVE"
+
+                return u, nil
+        }</span>
+
+}
+
+//支付宝异步通知处理
+func AlipayWebNotify(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        log.D("AlipayWebNotify Begin")
+
+        var callbackMsg = "fail"
+        defer func() </span><span class="cov8" title="1">{
+                log.D("AlipayWebNotify Notify End")
+                log.D("callbackMsg to alipay notifyW: %v", callbackMsg)
+                w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+                fmt.Fprint(w, callbackMsg)
+        }</span>()
+
+        <span class="cov8" title="1">r.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+        r.PostForm = nil
+        r.ParseForm()
+
+        log.D("==========================================================")
+        log.D("AlipayWebNotify Request :%v", r)
+        log.D("==========================================================")
+
+        if err := alipay.VerifyWebNotify(r, alipay.AWebConfig); err != nil </span><span class="cov8" title="1">{
+                //验证失败
+                log.D("verify notify fail")
+                return
+        }</span>
+        <span class="cov0" title="0">orderModel.DealAliNotify(r, `ALIPAY`, "web")
+
+        callbackMsg = "success"
+        return</span>
+}
+
+//支付宝 同步通知处理
+func AlipayWebReturn(w http.ResponseWriter, r *http.Request) <span class="cov8" title="1">{
+        log.D("AlipayWebReturn Begin")
+
+        var callbackMsg = "验证失败，请联系客服"
+        defer func() </span><span class="cov8" title="1">{
+                log.D("AlipayWebReturn End")
+                log.D("callbackMsg to alipay return: %v", callbackMsg)
+                fmt.Fprint(w, callbackMsg)
+        }</span>()
+        //        r.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+        //        r.PostForm = nil
+        <span class="cov8" title="1">r.ParseForm()
+
+        log.D("==========================================================")
+        log.D("AlipayWebReturn Request :%v", r)
+        log.D("==========================================================")
+
+        if err := alipay.VerifyWebNotify(r, alipay.AWebConfig); err != nil </span><span class="cov8" title="1">{
+                //验证失败
+                log.D("verify webreturn fail")
+                callbackMsg = "同步跳转检验失败，请联系客服"
+                return
+        }</span>
+        <span class="cov0" title="0">callbackMsg = orderModel.DealAliReturn(r)
+
+        return</span>
+}
+
+// func GetIntegral(db *sql.DB, uid int64) (int64, error) {
+//         var _score int64 = 0
+//         _sql := `select integral from uap_attr where oid=?`
+//         if err := db.QueryRow(_sql, uid).Scan(&amp;_score); err != nil {
+//                 log.E("getIntegral :%v", err.Error())
+//                 return _score, err
+//         }
+//         return _score, nil
+
+// }
+
+func CheckIsOnoExist(db *sql.DB, ono string, schema string) (bl bool, err error) <span class="cov8" title="1">{
+        IdCount := int64(0)
+        if ono != "" </span><span class="cov8" title="1">{
+                //checkIdSql := "select count(*) from " + schema + " where ono=?"
+                checkIdSql := fmt.Sprintf("%s%s%s%s%s", "select count(*) from ", schema, " where ono='", ono, "'")
+                if err = db.QueryRow(checkIdSql).Scan(&amp;IdCount); err != nil </span><span class="cov8" title="1">{
+                        log.E("%s", err.Error())
+                        return false, err
+                }</span>
+        }<span class="cov8" title="1"> else {
+                return false, errors.New("ono is nil")
+        }</span>
+
+        <span class="cov8" title="1">if IdCount == 0 </span><span class="cov8" title="1">{
+                log.E("idcount:%d", IdCount)
+                return false, nil
+        }</span>
+        <span class="cov8" title="1">return true, nil</span>
+}
+
+//check is paid
+func CheckIsPay(db *sql.DB, ono string, schema string) (status string, err error) <span class="cov8" title="1">{
+
+        if bl, _ := CheckIsOnoExist(db, ono, schema); bl != true </span><span class="cov0" title="0">{
+                return "", errors.New("ono not exist")
+        }</span>
+        <span class="cov8" title="1">_sql := fmt.Sprintf("%s%s%s%s%s", "select status from ", schema, " where ono='", ono, "'")
+        err = db.QueryRow(_sql).Scan(&amp;status)
+        if err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+        <span class="cov8" title="1">return</span>
+}
+
+// func IfAlipaySuccessFail(name string, Type string, money float64, pay_type string, targetid string, target_type string, ono string, status string) {
+//         //        conn = dbMgr.DbConn()
+//         log.D("数据库出错，后续处理中")
+//         go func() {
+//                 timer := time.NewTicker(10 * time.Second)
+//                 i := 0
+//                 for {
+//                         select {
+//                         case &lt;-timer.C:
+//                                 if i &lt; 5 {
+//                                         i++
+//                                 } else {
+//                                         return
+//                                 }
+//                                 if bl, _ := AlipayPaySuccess(name, Type, money, pay_type, targetid, target_type, ono, status); bl {
+//                                         timer.Stop()
+//                                         return
+//                                 }
+//                         }
+//                 }
+//         }()
+// }
+
+/*
+callback
+*/
+// func Callback(ono string) (bl bool, err error) {
+//         log.D("callback")
+//         var strurl1 string
+//         var strurl2 string
+
+//         strurl := fmt.Sprintf("%s%s", `http://`, conf.Rcp_host())
+//         db := common.DbConn()
+//         _sql := `select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)`
+//         if err := db.QueryRow(_sql, ono).Scan(&amp;strurl1); err != nil {
+//                 log.E("query aval err in ods_order_env")
+//                 return false, err
+//         }
+//         _sql = `select expand from ods_order where ono=?`
+//         if err := db.QueryRow(_sql, ono).Scan(&amp;strurl2); err != nil {
+//                 log.E("query aval err in ods_order")
+//                 return false, err
+//         }
+//         strurl = strurl + strurl1 + strurl2
+//         //Rcp_host
+
+//         fmt.Printf("strurl:%s\n", strurl)
+//         if strurl != "" {
+//                 res, err := http.Get(strurl)
+//                 if err != nil {
+//                         log.E("callback:get err:%s", err.Error())
+//                         return false, err
+//                 }
+//                 defer res.Body.Close()
+//                 got, err := ioutil.ReadAll(res.Body)
+//                 var cb CBStruct
+//                 if err := json.Unmarshal(got, &amp;cb); err != nil {
+//                         log.E("json err:%s", err.Error())
+//                         return false, nil
+//                 }
+//                 if cb.Code == int64(0) {
+//                         return true, nil
+//                 }
+//                 return false, nil
+//         }
+//         //如果没返回，就不管
+//         return true, nil
+//         //id=40001&amp;token=5e6248a918eb211ab85381c6499adeb8-db481955-9910-4db3-aa6c-b401f3831743
+// }
+
+/*
+func:after pay success,but not refund
+*/
+// func AlipayPaySuccess(name string, Type string, money float64, pay_type string, targetid string, target_type string, ono string, status string) (bool, error) {
+//         callback := false
+//         defer func() {
+//                 if callback == true {
+//                         if bl, _ := Callback(ono); bl != true {
+//                                 log.D("callback=false")
+//                                 go func(ono string) {
+//                                         log.D("回调出错，后续处理中")
+//                                         timer := time.NewTimer(5 * time.Second)
+//                                         i := 0
+//                                         for {
+//                                                 select {
+//                                                 case &lt;-timer.C:
+//                                                         if i &gt;= 5 {
+//                                                                 timer.Stop()
+//                                                                 return
+//                                                         } else {
+//                                                                 i++
+//                                                         }
+//                                                         if bl, _ := Callback(ono); bl {
+//                                                                 timer.Stop()
+//                                                                 return
+//                                                         }
+//                                                 }
+//                                         }
+//                                 }(ono)
+//                         } else {
+//                                 log.D("callback=true")
+//                         }
+//                 }
+//         }()
+
+//         db := common.DbConn()
+//         tx, _ := db.Begin()
+//         var uid int64
+//         var target_id int64
+//         // var imoney float64
+//         // var buyer int64
+//         _sql := `select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc`
+//         err := tx.QueryRow(_sql, ono).Scan(&amp;uid, &amp;target_id)
+//         //err1 := tx.QueryRow(_sql, ono).Scan(&amp;target_id)
+//         if err != nil /*|| err1 != nil*/ {
+//                 log.E("Query ods_record uid ,target_id error %v", err.Error())
+//                 tx.Rollback()
+//                 return false, errors.New("Query record uid,target_id error")
+//         }
+//         if uid == 0 || target_id == 0 {
+//                 log.E("uid or target_id not exist")
+//                 tx.Rollback()
+//                 return false, errors.New("uid or target not exist")
+//         }
+//         //integral
+
+//         //buyer--&gt;uid  record
+//         Type = "PAID"
+//         sts := "PAID"
+//         if bl, err := UpdateRecord(tx, Type, sts, uid, ono); bl != true {
+//                 return false, err
+//         }
+//         //seller--&gt;uid  record
+//         Type = "INCOME"
+//         if bl, err := UpdateRecord(tx, Type, sts, target_id, ono); bl != true {
+//                 return false, err
+//         }
+
+//         _sql = `update ods_order set status=? where ono =?`
+//         _, err = tx.Exec(_sql, status, ono)
+//         if err != nil {
+//                 log.E("Add ods_record error %v", err.Error())
+//                 tx.Rollback()
+//                 return false, err
+//         }
+//         _sql = `update ods_order set wno=NULL where ono =?`
+//         _, err = tx.Exec(_sql, ono)
+//         if err != nil {
+//                 log.E("Add ods_record error %v", err.Error())
+//                 tx.Rollback()
+//                 return false, err
+//         }
+//         err = tx.Commit()
+//         if err != nil {
+//                 log.E("AlipayPaySuccess commit error %v", err.Error())
+//                 tx.Rollback()
+//                 return false, err
+//         }
+//         callback = true
+//         return true, nil
+
+// }
+
+// func InsertRecord(tx *sql.Tx, name string, Type string, money float64, uid int64, pay_type string, target_id int64, target_type string, ono string, status string) (bool, error) {
+//         _sql := `insert into ods_record(name,type,money,uid,pay_type,target_id,target_type,ono,status) value(?,?,?,?,?,?,?,?,?)`
+//         //buyer
+//         _, err := tx.Exec(_sql, name, Type, money, uid, pay_type, target_id, target_type, ono, status)
+//         if err != nil {
+//                 log.E("Add ods_record buyer error %v", err.Error())
+//                 tx.Rollback()
+//                 return false, err
+//         }
+//         //seller
+//         return true, nil
+// }
+// func UpdateRecord(tx *sql.Tx, Type string, status string, uid int64, ono string) (bool, error) {
+
+//         _sql := `update ods_record set type=?,status=? where ono=? and uid=?`
+//         _, err := tx.Exec(_sql, Type, status, ono, uid)
+//         if err != nil {
+//                 log.E("update ods_record buyer or seller error %v", err.Error())
+//                 tx.Rollback()
+//                 return false, err
+//         }
+//         return true, nil
+// }
+
+/*
+_integral 负数减积分
+*/
+// func UpdateIntegral(tx *sql.Tx, _integral int64, tid int64) (bool, error) {
+
+//         _score, err := GetIntegral(common.DbConn(), tid)
+//         if err != nil {
+//                 tx.Rollback()
+//                 log.E("GetIntegral err: %v", err.Error())
+//                 return false, err
+//         }
+//         _updateIntegral := _score + _integral
+//         _sql := `update uap_attr set integral=? where oid=?`
+//         _, err = tx.Exec(_sql, _updateIntegral, tid)
+//         if err != nil {
+//                 log.E("update uap_attr integral %v", err.Error())
+//                 tx.Rollback()
+//                 return false, err
+//         }
+//         return true, nil
+// }
+
+//integral relate
+// func UpdateIntegralDb(db *sql.DB, _integral int64, tid int64) (bool, error) {
+
+//         _score, err := GetIntegral(db, tid)
+//         if err != nil {
+//                 return false, err
+//         }
+//         _updateIntegral := _score + _integral
+//         _sql := `update uap_attr set integral=? where oid=?`
+//         _, err = db.Exec(_sql, _updateIntegral, tid)
+//         if err != nil {
+//                 log.E("update uap_attr integral %v", err.Error())
+//                 return false, err
+//         }
+//         return true, nil
+// }
+
+//----------------积分相关-------------------
+//以后会用到，请勿删除
+// func ResumeIntegral(ono string) error {
+//         var imoney float64
+//         var buyer int64
+//         db := common.DbConn()
+//         _sql := `select money,o.buyer from ods_record r join ods_order o on r.uid=o.buyer and r.ono=o.ono  where o.ono=? and r.pay_type='大洋币'`
+//         err := db.QueryRow(_sql, ono).Scan(&amp;imoney, &amp;buyer)
+//         if err != nil {
+//                 log.E("Query ods_record money error %v", err.Error())
+//                 return errors.New("Query ods_record money error")
+//         }
+//         if imoney &gt; 0 {
+//                 _n_integral := int64(imoney)
+//                 if bl, err := UpdateIntegralDb(db, _n_integral, buyer); bl != true {
+//                         log.E("UpdateIntegral: %v", err.Error())
+//                         return err
+//                 }
+//         }
+//         return nil
+// }
+
+func updateExpand(db *sql.DB, ono string, expand string) (bl bool, err error) <span class="cov8" title="1">{
+        bl = false
+        _sql := `update ods_order set expand=? where ono=?`
+        _, err = db.Exec(_sql, expand, ono)
+        if err != nil </span><span class="cov8" title="1">{
+                log.E(err.Error())
+                return
+        }</span>
+        <span class="cov8" title="1">bl = true
+        return</span>
+}
+
+func CheckPaidcb(akey string) error <span class="cov8" title="1">{
+        paid_cb := ""
+        db := common.DbConn()
+        _sql := `select aval from ods_order_env where akey ='` + akey + `'`
+        log.D("%s", _sql)
+        if err := db.QueryRow(_sql).Scan(&amp;paid_cb); err != nil </span><span class="cov8" title="1">{
+                log.E("query aval err in ods_order_env")
+                return err
+        }</span>
+        <span class="cov8" title="1">return nil</span>
+}
+
+func getExpandByOno(db *sql.DB, ono string) (expand string, err error) <span class="cov8" title="1">{
+
+        _sql := `select expand from ods_order where ono=?`
+        if err = db.QueryRow(_sql, ono).Scan(&amp;expand); err != nil </span><span class="cov8" title="1">{
+                log.E("expand err %s", err.Error())
+                return "", err
+        }</span>
+        <span class="cov8" title="1">return</span>
+
+}
+
+func SetCurrentOne(ono string) <span class="cov8" title="1">{
+        c_ono = ono
+}</span>
+func GetCurrentOno() string <span class="cov8" title="1">{
+        return c_ono
+}</span>
+
+func TestAlipay(hs *routing.HTTPSession) routing.HResult <span class="cov8" title="1">{
+
+        args, _ := alipay.GenTestData()
+
+        args_ := ""
+        for k, v := range args </span><span class="cov8" title="1">{
+                args_ += k + "=" + v + "&amp;"
+        }</span>
+        <span class="cov8" title="1">fmt.Println("https://www.alipay.com/cooperate/gateway.do?" + args_)
+        res, _ := util.HPost("https://www.alipay.com/cooperate/gateway.do", args)
+
+        hs.W.Write([]byte(res))
+
+        return routing.HRES_RETURN</span>
+        //        return common.MsgRes(hs, parse)
+}
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">package orderalipay
+
+import (
+        "github.com/Centny/gwf/log"
+        "github.com/Centny/gwf/util"
+        "os"
+        "sync"
+)
+
+func DoPerf(tc int, logf string, call func(int64)) (int64, error) <span class="cov8" title="1">{
+        stdout := os.Stdout
+        stderr := os.Stderr
+        if len(logf) &gt; 0 </span><span class="cov8" title="1">{
+                f, err := os.OpenFile(logf, os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.ModePerm)
+                if err != nil </span><span class="cov0" title="0">{
+                        return 0, err
+                }</span>
+                <span class="cov8" title="1">os.Stdout = f
+                os.Stderr = f
+                log.SetWriter(f)</span>
+        }
+        <span class="cov8" title="1">ws := sync.WaitGroup{}
+        ws.Add(tc)
+        beg := util.Now()
+        for i := 0; i &lt; tc; i++ </span><span class="cov8" title="1">{
+                go func(v int64) </span><span class="cov8" title="1">{
+                        call(v)
+                        ws.Done()
+                }</span>(int64(i))
+        }
+        <span class="cov8" title="1">ws.Wait()
+        end := util.Now()
+        if len(logf) &gt; 0 </span><span class="cov8" title="1">{
+                os.Stdout.Close()
+                os.Stdout = stdout
+                os.Stderr = stderr
+                log.SetWriter(os.Stdout)
+        }</span>
+        <span class="cov8" title="1">return end - beg, nil</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible = document.getElementById('file0');
+		files.addEventListener('change', onChange, false);
+		function onChange() {
+			visible.style.display = 'none';
+			visible = document.getElementById(files.value);
+			visible.style.display = 'block';
+			window.scrollTo(0, 0);
+		}
+	})();
+	</script>
+</html>

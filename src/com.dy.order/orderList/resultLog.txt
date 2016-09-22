@@ -1,0 +1,52 @@
+2016/02/01 14:54:27 conn.go:24: [D] connected to cny:123@tcp(192.168.2.57:3306)/orderv2_test?charset=utf8&loc=Local
+
+2016/02/01 14:54:27 conn.go:26: [D] ping success
+2016/02/01 14:54:27 order.go:82: [D] ps 10,pn 1,count 1
+[32m.[0m[31m[0m[33m[0m[32m
+1 total assertion[0m
+
+2016/02/01 14:54:27 order.go:82: [D] ps 10,pn 1,count 2
+[32m.[0m[31m[0m[33m[0m[32m
+2 total assertions[0m
+
+2016/02/01 14:54:27 order.go:82: [D] ps 10,pn 1,count 1
+[32m.[0m[31m[0m[33m[0m[32m
+3 total assertions[0m
+
+2016/02/01 14:54:27 order.go:82: [D] ps 10,pn 1,count 1
+[32m.[0m[32m.[0m[31m[0m[33m[0m[32m
+5 total assertions[0m
+
+[32m.[0m[32m.[0m[31m[0m[33m[0m[32m
+7 total assertions[0m
+
+2016/02/01 14:54:27 order.go:82: [D] ps 10,pn 1,count 1
+[32m.[0m[32m.[0m[31m[0m[33m[0m[32m
+9 total assertions[0m
+
+[32m.[0m[31m[0m[33m[0m[32m
+10 total assertions[0m
+
+2016/02/01 14:54:27 order.go:160: [E] 订单编号为空
+[32m.[0m[31m[0m[33m[0m[32m
+11 total assertions[0m
+
+2016/02/01 14:54:27 order.go:183: [E] 订单不处于可关闭状态
+[32m.[0m[31m[0m[33m[0m[32m
+12 total assertions[0m
+
+2016/02/01 14:54:27 order.go:169: [E] 查询订单状态错误:DEM query matched error
+[32m.[0m[31m[0m[33m[0m[32m
+13 total assertions[0m
+
+2016/02/01 14:54:27 order.go:178: [E] 更新订单状态错误:DEM query matched error
+[32m.[0m[31m[0m[33m[0m[32m
+14 total assertions[0m
+
+
+		-----------------------------
+		 Used:246ms,Count:1,Per:246ms
+		-----------------------------
+		PASS
+coverage: 100.0% of statements
+ok  	order/src/com.dy.order/orderList	0.321s

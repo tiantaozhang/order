@@ -1,0 +1,678 @@
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+2016/03/01 18:15:36 wxpay_App_http.go:23: [D] begin WxMoblieRemoteCall remote request%!(EXTRA string=heheda)
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+req:{"ono":"","buyer":267250,"seller":438982,"subject":"testWXPay","totalFee":0.01,"body":"test","type":"N","status":"NOT_PAY","return_url":"http://rcp.dev.jxzy.com/courseDetail.html?id=40040","expand":"id=40040\u0026token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35","integral":0,"item":[{"ono":"","oid":1,"p_name":"物品1","p_id":1,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"},{"ono":"","oid":2,"p_name":"物品2","p_id":2,"p_type":"","p_img":"http://image.baidu.com/search/detail?ct=503316480\u0026z=0\u0026ipn=d\u0026word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87\u0026pn=2\u0026spn=0\u0026di=171315887930\u0026pi=\u0026rn=1\u0026tn=baiduimagedetail\u0026ie=utf-8\u0026oe=utf-8\u0026cl=2\u0026lm=-1\u0026cs=1879444470%2C3904781009\u0026os=340336596%2C2044119696\u0026simid=4219135247%2C874483244\u0026adpicid=0\u0026ln=30\u0026fr=ala\u0026sme=\u0026cg=\u0026bdtype=0\u0026objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg\u0026fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s\u0026gsm=0","p_count":1,"p_from":"TEST","notified":0,"price":0.01,"type":"N","status":"N"}],"refund":null}
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+js:{ %!s(int64=267250) %!s(int64=438982) testWXPay %!s(float64=0.01) test N NOT_PAY http://rcp.dev.jxzy.com/courseDetail.html?id=40040 id=40040&token=4d42bf9c18cb04139f918ff0ae68f8a0-fd724b48-caf7-4151-932b-dab86282ab35 %!s(int64=0) [{ %!s(int64=1) 物品1 %!s(int64=1)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N} { %!s(int64=2) 物品2 %!s(int64=2)  http://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E7%99%BE%E5%BA%A6%E5%9B%BE%E7%89%87&pn=2&spn=0&di=171315887930&pi=&rn=1&tn=baiduimagedetail&ie=utf-8&oe=utf-8&cl=2&lm=-1&cs=1879444470%2C3904781009&os=340336596%2C2044119696&simid=4219135247%2C874483244&adpicid=0&ln=30&fr=ala&sme=&cg=&bdtype=0&objurl=http%3A%2F%2Fd.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F6d81800a19d8bc3e4a4c8226838ba61ea9d34592.jpg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fzit1w5_z%26e3Bkwt17_z%26e3Bv54AzdH3Fq7jfpt5gAzdH3Fc0lclac9l_z%26e3Bip4s&gsm=0 %!s(int64=1) TEST %!s(int64=0) %!s(float64=0.01) N N}] []}
+DEM Query(select 1) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>233acd7ed18636d9e1c1af661e0eb244</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153635400</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>397AB4E3A66B991C2D3796F813A1BD38</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>233acd7ed18636d9e1c1af661e0eb244</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153635400</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>397AB4E3A66B991C2D3796F813A1BD38</sign></xml>)
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>24ba8dd40d0b660796b571cc9de0e603</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153632792</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>3578D169DA13DA5E8F369C6AF89E51DF</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>24ba8dd40d0b660796b571cc9de0e603</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153632792</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>3578D169DA13DA5E8F369C6AF89E51DF</sign></xml>)
+DEM Query(select 1) args([])
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>18961eb7991beffd3f7ee3f559c85ad9</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153625817</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>4BA14922AFE15F13B3E9C488AF4FC7CA</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>18961eb7991beffd3f7ee3f559c85ad9</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153625817</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>4BA14922AFE15F13B3E9C488AF4FC7CA</sign></xml>)
+DEM Query(select 1) args([])
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>32aa9e1fbed8250eb1cf94aa0d10d23e</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153668065</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>CBAF70B3A19708B679BA6F93007AEF48</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>32aa9e1fbed8250eb1cf94aa0d10d23e</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153668065</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>CBAF70B3A19708B679BA6F93007AEF48</sign></xml>)
+DEM Query(select 1) args([])
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>b8a512f83d7b76c8b4b1966cb95295cc</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153624996</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>11EF6FABD40D4CC0A6F2724F13CFB595</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>b8a512f83d7b76c8b4b1966cb95295cc</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153624996</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>11EF6FABD40D4CC0A6F2724F13CFB595</sign></xml>)
+DEM Query(select 1) args([])
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>21555b7429faf7d3f18660186fce0265</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153665719</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>D0993E33900919B30FC3627C3529372B</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>21555b7429faf7d3f18660186fce0265</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153665719</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>D0993E33900919B30FC3627C3529372B</sign></xml>)
+DEM Query(select 1) args([])
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>67d5040eb5c38e4e2d76db85a59185f8</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153687411</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>D78C52F218D9DC56D16EF013A8F57E2E</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>67d5040eb5c38e4e2d76db85a59185f8</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153687411</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>D78C52F218D9DC56D16EF013A8F57E2E</sign></xml>)
+DEM Query(select 1) args([])
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>4edc7b57572b030747e648844e95e326</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153681817</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>8429AFB4A75FCEBDF40A6715F5096DAE</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>4edc7b57572b030747e648844e95e326</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153681817</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>8429AFB4A75FCEBDF40A6715F5096DAE</sign></xml>)
+DEM Query(select 1) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>b2387415b0f94dc7d72477b2dc3068fa</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153697499</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>35D55E3DA1FD0B1A78E9068F4C59BA61</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>b2387415b0f94dc7d72477b2dc3068fa</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153697499</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>35D55E3DA1FD0B1A78E9068F4C59BA61</sign></xml>)
+2016/03/01 18:15:36 wxpay_App_http.go:47: [D] integral:0.010000,0.000000
+Total_fee:1
+2016/03/01 18:15:36 wxpay_navite_app.go:91: [D] UnifiedorderRequestXml : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>b276301b77cfb391f32b3896e96dbcf1</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153667459</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>E655E3058D0A62297D3C0D48EE47ABF5</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:143: [D] 微信预下单参数 : %!(EXTRA string=<xml><appid>wx270243445e3233ee</appid><body>testWXPay</body><detail>test</detail><mch_id>1288157701</mch_id><nonce_str>b276301b77cfb391f32b3896e96dbcf1</nonce_str><notify_url>http://order.dev.jxzy.com/wxpay-mobile-notify</notify_url><out_trade_no>2016030118153667459</out_trade_no><spbill_create_ip>127.0.0.1</spbill_create_ip><total_fee>1</total_fee><trade_type>APP</trade_type><sign>E655E3058D0A62297D3C0D48EE47ABF5</sign></xml>)
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[HAHLFg8GwSVgzdU4]]></nonce_str>
+<sign><![CDATA[CE611D020011D440A1B2EF0665F2A3A1]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40348929646]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40348929646
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[SploAjJ4hu9j415j]]></nonce_str>
+<sign><![CDATA[093C98BD2015D00DD589106D26BC9F68]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40845470085]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40845470085
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[H4V7zxcoW95gdoZr]]></nonce_str>
+<sign><![CDATA[6667FCBC3171D840EC91F3FA04BF9FEC]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40704423571]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40704423571
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[YYtr2NpwQrI1pF1R]]></nonce_str>
+<sign><![CDATA[9D23A64B88F573FB0EA92DFAAF66B387]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40567100198]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40567100198
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[6V1O2ydPYCq642MN]]></nonce_str>
+<sign><![CDATA[81FFA43536F864DFDE28DF462BB3A573]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40761592447]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40761592447
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[HsAtxdkTkLJHs5jT]]></nonce_str>
+<sign><![CDATA[668821B986208745BA00FD9FC8724EEF]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40534889246]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40534889246
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[hdeK8J04zZU3amEg]]></nonce_str>
+<sign><![CDATA[4141D03D7B24F92FE6E65B4980F8CE96]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40490306110]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40490306110
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[MxYJdXjMfVihKALR]]></nonce_str>
+<sign><![CDATA[2C29B37FB921F67966FC95B48382407E]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40651025207]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40651025207
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[5cJ4lYqNeOqfgXXE]]></nonce_str>
+<sign><![CDATA[28692FD5785F63689E6800A3162F8F3B]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40219054331]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40219054331
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+2016/03/01 18:15:36 wxpay_navite_app.go:152: [D] 微信预下单返回结果 : %!(EXTRA string=<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx270243445e3233ee]]></appid>
+<mch_id><![CDATA[1288157701]]></mch_id>
+<nonce_str><![CDATA[7cAUPF4uYzGUWT5H]]></nonce_str>
+<sign><![CDATA[3C7AC82BA6872598AE88FBEBB2E8E048]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201603011815367a6a8e1ce40586647645]]></prepay_id>
+<trade_type><![CDATA[APP]]></trade_type>
+</xml>)
+2016/03/01 18:15:36 wxpay_core.go:54: [D] Appid is:wx270243445e3233ee,return_code:SUCCESS,prepay_id:wx201603011815367a6a8e1ce40586647645
+2016/03/01 18:15:36 model.go:265: [D] seller:438982,buyer:267250
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:36 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:36 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:37 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 STOKEN 0ca9a4d526c6313203b459694a333a36-974e8dc1-5566-4425-baea-b69210028288 0 S 267250 O 0 N 1970-01-18 04:00:16.684 +0800 CST])
+2016/03/01 18:15:37 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:37 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:38 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:38 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+2016/03/01 18:15:38 wxpay_App_http.go:222: [D] the 2 times ccb wx
+2016/03/01 18:15:38 thdPayAbout.go:21: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150739703])
+DEM Query(select expand from ods_order where ono=?) args([2016030118150739703])
+strurl:/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/03/01 18:15:38 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: unsupported protocol scheme ""
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+2016/03/01 18:15:38 wxpay_App_http.go:222: [D] the 2 times ccb wx
+2016/03/01 18:15:38 thdPayAbout.go:21: [D] callback
+DEM Query(select 1) args([])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+2016/03/01 18:15:38 wxpay_App_http.go:222: [D] the 2 times ccb wx
+2016/03/01 18:15:38 thdPayAbout.go:21: [D] callback
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150739703])
+DEM Query(select 1) args([])
+DEM Query(select 1) args([])
+DEM Query(select expand from ods_order where ono=?) args([2016030118150739703])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150739703])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+strurl:/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/03/01 18:15:38 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: unsupported protocol scheme ""
+DEM Query(select expand from ods_order where ono=?) args([2016030118150739703])
+DEM Query(select 1) args([])
+strurl:/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/03/01 18:15:38 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: unsupported protocol scheme ""
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:38 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 STOKEN 0ca9a4d526c6313203b459694a333a36-974e8dc1-5566-4425-baea-b69210028288 0 S 267250 O 0 N 1970-01-18 04:00:16.684 +0800 CST])
+2016/03/01 18:15:39 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:39 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:39 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:39 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:40 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_PASS  0 S 267250 O 0 N 1970-01-17 22:50:34.747 +0800 CST])
+2016/03/01 18:15:40 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:40 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:40 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:40 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:41 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_HEIGHT  0 S 267250 O 0 N 1970-01-18 02:17:44.874 +0800 CST])
+2016/03/01 18:15:41 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:41 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
+2016/03/01 18:15:41 wxpay_App_http.go:222: [D] the 3 times ccb wx
+2016/03/01 18:15:41 thdPayAbout.go:21: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150739703])
+DEM Query(select expand from ods_order where ono=?) args([2016030118150739703])
+strurl:/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/03/01 18:15:41 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: unsupported protocol scheme ""
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:41 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:41 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+2016/03/01 18:15:41 wxpay_App_http.go:222: [D] the 3 times ccb wx
+2016/03/01 18:15:41 thdPayAbout.go:21: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150739703])
+DEM Query(select expand from ods_order where ono=?) args([2016030118150739703])
+2016/03/01 18:15:41 wxpay_App_http.go:222: [D] the 3 times ccb wx
+2016/03/01 18:15:41 thdPayAbout.go:21: [D] callback
+strurl:/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+DEM Query(select 1) args([])
+2016/03/01 18:15:41 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: unsupported protocol scheme ""
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150739703])
+DEM Query(select expand from ods_order where ono=?) args([2016030118150739703])
+strurl:/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/03/01 18:15:41 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: unsupported protocol scheme ""
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:42 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_NAME linjie 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/03/01 18:15:42 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:42 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:43 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:43 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:43 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_SEX 男 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/03/01 18:15:43 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:43 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:44 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:44 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+2016/03/01 18:15:44 wxpay_App_http.go:174: [D] the 1 times ccb wx fail
+DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016021718351688391])
+2016/03/01 18:15:44 wxpay_App_http.go:253: [E] Query ods_record uid ,target_id error sql: no rows in result set
+2016/03/01 18:15:44 wxpay_App_http.go:174: [D] the 1 times ccb wx fail
+DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016021718351688391])
+2016/03/01 18:15:44 wxpay_App_http.go:253: [E] Query ods_record uid ,target_id error sql: no rows in result set
+2016/03/01 18:15:44 wxpay_App_http.go:222: [D] the 4 times ccb wx
+2016/03/01 18:15:44 thdPayAbout.go:21: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150739703])
+DEM Query(select expand from ods_order where ono=?) args([2016030118150739703])
+strurl:/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/03/01 18:15:44 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: unsupported protocol scheme ""
+2016/03/01 18:15:44 wxpay_App_http.go:174: [D] the 1 times ccb wx fail
+DEM Query(select 1) args([])
+DEM Query(select buyer,seller from  ods_order o join ods_record r  where r.ono=o.ono and r.ono =? order by r.tid asc) args([2016030118150774954])
+2016/03/01 18:15:44 wxpay_App_http.go:260: [E] uid or target_id not exist
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:44 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_HEIGHT  0 S 267250 O 0 N 1970-01-18 02:17:44.874 +0800 CST])
+2016/03/01 18:15:44 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:44 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
+2016/03/01 18:15:44 wxpay_App_http.go:222: [D] the 4 times ccb wx
+2016/03/01 18:15:44 thdPayAbout.go:21: [D] callback
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150739703])
+DEM Query(select expand from ods_order where ono=?) args([2016030118150739703])
+2016/03/01 18:15:44 wxpay_App_http.go:222: [D] the 4 times ccb wx
+2016/03/01 18:15:44 thdPayAbout.go:21: [D] callback
+strurl:/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/03/01 18:15:44 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: unsupported protocol scheme ""
+DEM Query(select 1) args([])
+DEM Query(select aval from ods_order_env where akey in (select p_from from ods_order_item where ono=?)) args([2016030118150739703])
+DEM Query(select expand from ods_order where ono=?) args([2016030118150739703])
+strurl:/usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4
+2016/03/01 18:15:44 thdPayAbout.go:45: [E] callback:get err:Get /usr/purchase-course?id=40021&token=b4561e0e8c3e185e9ef858cc54cad5f1-9933ec14-6590-4548-9613-0cda727bfbe4: unsupported protocol scheme ""
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:44 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:44 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:45 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_ADDR 广州 0 S 267250 O 0 N 1970-01-17 22:50:34.726 +0800 CST])
+2016/03/01 18:15:45 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:45 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:46 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:46 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:46 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 R_NAME linjie 0 S 267250 O 0 N 1970-01-18 02:48:00.214 +0800 CST])
+2016/03/01 18:15:46 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:46 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([438982 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:47 sync.go:50: [D] SyncMUsr
+2016/03/01 18:15:47 sync.go:53: [D] mongo db is not init,skip sync usr
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([438982])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=438982 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+2016/03/01 18:15:47 wxpay_App_http.go:218: [D] kill timer wx
+2016/03/01 18:15:47 wxpay_App_http.go:218: [D] kill timer wx
+2016/03/01 18:15:47 wxpay_App_http.go:218: [D] kill timer wx
+DEM Query(select 1) args([])
+DEM Query(SELECT TID,USR,STATUS,TIME FROM UCS_USR WHERE (TID=? OR USR=?) AND USR<>'' AND STATUS<>'INVALID') args([267250 ])
+DEM Query(SELECT * FROM UCS_U_ATTR WHERE UID=? AND STATUS <> 'INVALID') args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT GID FROM UAP_U2G WHERE UID=?
+) args([267250])
+DEM Query(select 1) args([])
+DEM Query(
+SELECT * FROM UAP_ATTR WHERE (OID=267250 AND OWNER="USR" AND TYPE="P") OR (OID IN (0) AND OWNER="GRP" AND TYPE="I") OR (OID IN (0) AND OWNER="GRP" AND TYPE="P")
+) args([])
+DEM Query(select 1) args([])
+2016/03/01 18:15:47 sync.go:115: [I] sync user attr(c:1,d:1,u:0,add:false)
+DEM Exec(DELETE FROM UCS_U_ATTR WHERE UID=267250 AND TID IN (0,3282)) args([])
+DEM Exec(INSERT INTO UCS_U_ATTR (TID,A_KEY,S_VAL,N_VAL,VAL_T,UID,TYPE,GRP_NO,STATUS,TIME) VALUES(?,?,?,?,?,?,?,?,?,?)) args([0 I_PASS  0 S 267250 O 0 N 1970-01-17 22:50:34.747 +0800 CST])
+2016/03/01 18:15:48 model.go:271: [E] sync.SyncUsr buyer:DEM COMMIT_ERR
+2016/03/01 18:15:48 wxpay_App_http.go:92: [E] DealWXOrder err:%!(EXTRA string=DEM COMMIT_ERR)
+WxMoblieRemoteCall err DEM COMMIT_ERR
